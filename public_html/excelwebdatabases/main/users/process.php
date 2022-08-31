@@ -1,19 +1,17 @@
 <?php
 $recaptcha = $_POST["token"];
 if(checkCaptcha($recaptcha)){
-    //succeed
+//    succeed
     $k = file_get_contents("keys.txt");
     $r = mt_rand(100000000000000, 999999999999999);
     if(strpos($k, $r) === false){
         file_put_contents("keys.txt", $k."\n".$r);
     }
-    $key = "EWD".$r."K";
-    mkdir($key);
-}
-    
-else{
-    //fail
-    header("Location:https://s.jacute.xyz/excelwebdatabases/start/step2/captcha?l=https://s.jacute.xyz/excelwebdatabases/start/");
+   $key = "EWD".$r."K";
+   mkdir($key);
+} else {
+   //fail-->
+    header("Location:/excelwebdatabases/public_html/excelwebdatabases/start/step2/captcha?l=/excelwebdatabases/public_html/excelwebdatabases/start/");
 }
 function checkCaptcha($recaptcha){
     $url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -56,7 +54,7 @@ function checkCaptcha($recaptcha){
             <a href="/excelwebdatabases/public_html/excelwebdatabases/" class="optionOff">ExcelWebDatabases</a>
             <a href="" class="optionOn">Get Started</a>
             <a href="/excelwebdatabases/public_html/excelwebdatabases/start/login/" class="optionOff">ExcelWebDatabases Login</a>
-            <a href="https://jacute.xyz" class="optionOff">Main Home</a>
+            <a href="https://jacute.xyz" class="optionOff" target="_blank">Main Home</a>
             <br>
             <br>
             <br>

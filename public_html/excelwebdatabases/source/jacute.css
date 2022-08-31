@@ -16,9 +16,33 @@ body{
 
 .topDiv {
     background-color: var(--black);
-    color:white;
+    color: var(--celadon);
     padding:5px;
     text-align:center;
+}
+
+.topDiv a, .bottomDiv a {
+    color: var(--true-blue);
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.topDiv a:after, .bottomDiv a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--celadon);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+}
+.topDiv a:hover:after, .bottomDiv a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 .bt {
     font-size:80px;
@@ -75,11 +99,11 @@ body{
     border-radius: 10px;
     background-color: var(--periwinkle-crayola);
     width: 800px;
+    max-height: 500px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     transition: 0.3s all;
-
 }
 .box:hover {
     box-shadow: 5px 5px 18px black;
@@ -95,21 +119,24 @@ body{
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
     opacity: 0;
     justify-content: center;
-}
-.overlay:hover {
-    opacity: 1;
+    max-width: 100%;
+
 }
 #mainpage-box:hover {
     color: transparent;
     text-shadow: 0 0 7px rgba(0,0,0,0.7);
+    opacity: 1;
 }
 #mainpage-box:hover img {
     -webkit-filter: blur(2px);
     filter: blur(2px);
 }
+#mainpage-box:hover .overlay {
+    opacity: 1;
+}
+
 .overlay a {
     color: black;
     margin: 0;
@@ -118,8 +145,12 @@ body{
     font-size: 30px;
     text-shadow:none;
 }
+
 img {
     width: 40px;
+}
+input {
+    cursor: pointer;
 }
 .login-input {
     width: 500px;
@@ -161,6 +192,7 @@ img {
 .bottomDiv {
     background-color: black;
     padding: 5px;
-    color: white;
+    color: var(--desert-sand);
     text-align: center;
 }
+

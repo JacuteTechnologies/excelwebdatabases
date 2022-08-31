@@ -3,7 +3,7 @@ $recaptcha = $_POST["token"];
 if(checkCaptcha($recaptcha)){
     //succeed
     if(!is_dir($_POST["key"])){
-        header("Location:");
+//         header("Location:");
     }
 }
     
