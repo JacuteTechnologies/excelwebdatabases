@@ -38,7 +38,7 @@ function checkCaptcha($recaptcha){
 <html>
     <head>
         <title>Jacute Technologies - ExcelWebDatabases</title>
-        <link rel="icon" href="https://jacute.xyz/favicon.ico">
+        <link rel="icon" href="/excelwebdatabases/public_html/excelwebdatabases/source/favicon.ico">
         <script src="https://www.google.com/recaptcha/api.js?render=6LclS6ohAAAAAFLHXInxx2UrrOtjRIHvBfs9B1Ki"></script>
         <script>
             grecaptcha.ready(function() {
@@ -47,44 +47,31 @@ function checkCaptcha($recaptcha){
                 });
             });
         </script>
-        <link rel="stylesheet" href="https://s.jacute.xyz/excelwebdatabases/source/jacute.css">
-        <style>
-            .box{
-                border-radius:10px;
-                background-color:lightgreen;
-                margin-left:auto;
-                margin-right:auto;
-                display:block;
-                width:800px;
-                padding:5px;
-                margin-top:20px;
-                text-align:center;
-            }
-        </style>
+        <link rel="stylesheet" href="/excelwebdatabases/public_html/excelwebdatabases/source/jacute.css">
     </head>
     <body>
         <div class="topDiv">
             <p class="bt">Jacute Technologies</p>
             <p class="mt">ExcelWebDatabases</p>
-            <a href="https://s.jacute.xyz/excelwebdatabases/" class="optionOff">ExcelWebDatabases</a>
+            <a href="/excelwebdatabases/public_html/excelwebdatabases/" class="optionOff">ExcelWebDatabases</a>
             <a href="" class="optionOn">Get Started</a>
-            <a href="start/login/" class="optionOff">ExcelWebDatabases Login</a>
+            <a href="/excelwebdatabases/public_html/excelwebdatabases/start/login/" class="optionOff">ExcelWebDatabases Login</a>
             <a href="https://jacute.xyz" class="optionOff">Main Home</a>
-            <br><br><br>
-            <a href="" class="optionOff">Step One</a>
-            <a href="" class="optionOn">Step Two</a>
+            <br>
+            <br>
+            <br>
             <br><br>
         </div>
         <div class="box">
-            <p style="font-size:40px"><img src="/excelwebdatabases/source/excel.png" style="width:40px">ExcelWebDatabases</p>
+            <p style="font-size:40px"><img src="/excelwebdatabases/public_html/excelwebdatabases/source/excel.png" style="width:40px">ExcelWebDatabases</p>
             <p style="font-size:30px">Get Started: Step Two: Save your API key</p>
             <input type="text" style="border:2px solid black; border-radius:5px;padding:3px;font-size:30px;width:500px;text-align:center" value="<?php echo $key;?>" readonly>
             <p>You will use this to log in and access your documents, don't lose it</p>
-            <a href="https://s.jacute.xyz/excelwebdatabases/start/login/" class="visitButton" style="font-size:30px">Proceed to Login</a>
+            <a href="/excelwebdatabases/public_html/excelwebdatabases/start/login/" class="btn" style="font-size:30px">Proceed to Login</a>
             <br><br>
         </div>
         <br>
-        <div class="topDiv">
+        <div class="bottomDiv">
         <p>(c)2022 Jacute Technologies</p>
         <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>
         </div>

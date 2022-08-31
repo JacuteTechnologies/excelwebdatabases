@@ -34,33 +34,20 @@ function checkCaptcha($recaptcha){
 <html>
     <head>
         <title>Jacute Technologies - ExcelWebDatabases</title>
-        <link rel="icon" href="https://jacute.xyz/favicon.ico">
+        <link rel="icon" href="/excelwebdatabases/public_html/excelwebdatabases/source/favicon.ico">
         <script src="https://www.google.com/recaptcha/api.js?render=6LclS6ohAAAAAFLHXInxx2UrrOtjRIHvBfs9B1Ki"></script>
-        <link rel="stylesheet" href="https://s.jacute.xyz/excelwebdatabases/source/jacute.css">
-        <style>
-            .box{
-                border-radius:10px;
-                background-color:lightgreen;
-                margin-left:auto;
-                margin-right:auto;
-                display:block;
-                width:800px;
-                padding:5px;
-                margin-top:20px;
-                text-align:center;
-            }
-        </style>
+        <link rel="stylesheet" href="/excelwebdatabases/public_html/excelwebdatabases/source/jacute.css">
     </head>
     <body>
         <div class="topDiv">
             <p class="bt">Jacute Technologies</p>
             <p class="mt">ExcelWebDatabases</p>
-            <a href="https://s.jacute.xyz/excelwebdatabases/" class="optionOn">ExcelWebDatabases</a>
-            <a href="https://jacute.xyz" class="optionOff">Main Home</a>
+            <a href="/excelwebdatabases/public_html/excelwebdatabases/" class="optionOn">ExcelWebDatabases</a>
+            <a href="https://jacute.xyz" class="optionOff" target="_blank">Main Home</a>
             <br><br>
         </div>
         <div class="box">
-            <p style="font-size:40px"><img src="/excelwebdatabases/source/excel.png" style="width:40px">ExcelWebDatabases</p>
+            <p style="font-size:40px"><img src="/excelwebdatabases/excelwebdatabases/public_html/source/excel.png" style="width:40px">ExcelWebDatabases</p>
             <p style="font-size:30px">API Key: <?php echo $_POST["key"];?></p>
             
             <br><br>
