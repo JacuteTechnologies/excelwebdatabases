@@ -53,7 +53,7 @@ function checkCaptcha($recaptcha){
             <br><br>
         </div>
         <br>
-        <div class="topDiv">
+        <div class="bottomDiv">
         <p>(c)2022 Jacute Technologies</p>
         <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>
         </div>
