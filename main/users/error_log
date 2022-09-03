@@ -1,0 +1,9 @@
+[01-Sep-2022 09:57:45 America/New_York] PHP Notice:  Undefined index: token in /home/jacuantf/s.jacute.xyz/main/users/index.php on line 7
+[01-Sep-2022 09:57:46 America/New_York] PHP Notice:  Undefined variable: key in /home/jacuantf/s.jacute.xyz/main/users/index.php on line 70
+[01-Sep-2022 09:57:46 America/New_York] PHP Notice:  Undefined variable: key in /home/jacuantf/s.jacute.xyz/main/users/index.php on line 74
+[01-Sep-2022 09:57:46 America/New_York] PHP Warning:  scandir(): Directory name cannot be empty in /home/jacuantf/s.jacute.xyz/main/users/index.php on line 74
+[01-Sep-2022 09:57:46 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/jacuantf/s.jacute.xyz/main/users/index.php on line 75
+[01-Sep-2022 09:57:46 America/New_York] PHP Notice:  Undefined variable: key in /home/jacuantf/s.jacute.xyz/main/users/index.php on line 94
+[01-Sep-2022 11:29:15 America/New_York] PHP Notice:  Undefined index: token in /home/jacuantf/s.jacute.xyz/main/users/upload.php on line 2
+[01-Sep-2022 14:44:06 America/New_York] PHP Notice:  Undefined index: token in /home/jacuantf/s.jacute.xyz/main/users/process.php on line 2
+[01-Sep-2022 14:44:06 America/New_York] PHP Notice:  Undefined variable: key in /home/jacuantf/s.jacute.xyz/main/users/process.php on line 66
