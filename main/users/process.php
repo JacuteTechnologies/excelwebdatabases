@@ -11,7 +11,7 @@ if(checkCaptcha($recaptcha)){
    mkdir($key);
 } else {
    //fail-->
-    header("Location:/excelwebdatabases/public_html/excelwebdatabases/start/step2/captcha?l=/excelwebdatabases/public_html/excelwebdatabases/start/");
+    header("Location:/start/step2/captcha?l=/excelwebdatabases/public_html/excelwebdatabases/start/");
 }
 function checkCaptcha($recaptcha){
     $url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -52,7 +52,6 @@ function checkCaptcha($recaptcha){
             <p class="bt">Jacute Technologies</p>
             <p class="mt">ExcelWebDatabases</p>
             <a href="/" class="optionOff">ExcelWebDatabases</a>
-            <a href="" class="optionOn">Get Started</a>
             <a href="/start/login.html" class="optionOff">ExcelWebDatabases Login</a>
             <a href="https://jacute.xyz" class="optionOff" target="_blank">Main Home</a>
             <br>

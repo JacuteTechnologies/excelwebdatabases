@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Documentation - ExcelWebDatabases</title>
         <link rel="icon" href="/source/favicon.ico">
@@ -9,28 +9,56 @@
         <div class="topDiv">
             <p class="bt">Jacute Technologies</p>
             <p class="mt">ExcelWebDatabases</p>
-            <a href="" class="optionOn">ExcelWebDatabases</a>
+            <a href="/" class="optionOn">ExcelWebDatabases</a>
             <a href="/start/login.html" class="optionOff">Login</a>
-            <a href="/documentation/" class="optionOff" target="_blank">Documentation</a>
-            <a href="/start/signup.html" class="optionOff">Get Started</a>
-            <a href="https://jacute.xyz/" class="optionOff" target="_blank">Explore More of our Exciting Inventions!</a>
-            <br><br>
+            <a href="https://jacute.xyz/" class="optionOff" target="_blank">Main Home</a>
         </div>
-        <br>
-        <br>
-        <div class="box" id="box">
-            <h1 style="font-size:40px"><img src="/source/excel.png">ExcelWebDatabases Documentation</h1>
-            <h2 style="font-size:30px">Once you've created your API key and uploaded a document, you now want to access it.</h2>
-            <h2>You have read/write options, for reading and writing to individual cells or multiple cells at a time.</h2>
-            <h1>Reading an individual cell: GET Request</h1>
-            <textarea type="text" style="width:700px;height:100px" class="login-input" readonly>https://s.jacute.xyz/main/users/api.php?key=INSERT_KEY&document=INSERT_DOC_NAME&mode=r_OR_w&isMulti=false&cell=INSERT_CELL_TO_READ</textarea>
-            <h2>Returns JSON:</h2>
-            <textarea type="text" style="width:700px;height:100px" class="login-input" readonly></textarea>
+        <div class="docs-sidebar">
+            <p style="margin-left: 10px; font-size: 20px;">Documentation:</p>
+            <button
+                    style="
+                        margin-left: 10px;
+                        background-color: transparent;
+                        border: none;
+                        font-size: 20px;
+                        color: white;
+                        cursor: pointer;"
+                        class="collapsible"
+                        id="docs-home-btn"
+            >
+                Home
+            </button>
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="pages/overview.html">Overview</a>
+                    </li>
+                    <li>
+                        <a href="pages/getting-started.html">Getting Started</a>
+                    </li>
+                    <li>
+                        <a href="pages/home.html">Home</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <br> <br>
         <div class="bottomDiv">
         <p>(c)2022 Jacute Technologies</p>
         <a href="mailto:jacute@iota.ws">Contact</a>
         </div>
+        <script>
+                const coll = document.getElementsByClassName("collapsible");
+                for (let i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        const content = this.nextElementSibling;
+                        if (content.style.display === "flex") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "flex";
+                        }
+                    });
+            }
+        </script>
     </body>
 </html>
