@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&display=swap');
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: "Anek Telugu", sans-serif;
     padding:0;
     margin:0;
+    background-color: var(--bg);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 :root {
     --black: #000000ff;
@@ -12,22 +14,32 @@ body{
     --true-blue: #3066beff;
     --periwinkle-crayola: #c6d2edff;
     --desert-sand: #ddbea8ff;
+    --bg: #22272e;
+    --white: #FFFFFF;
 }
 
+
 .topDiv {
-    background-color: var(--black);
-    color: var(--celadon);
+    background-color: var(--true-blue);
+    color: var(--white);
     padding:5px;
     text-align:center;
 }
-
-.topDiv a, .bottomDiv a {
-    color: var(--true-blue);
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.25s all;
+}
+a:hover {
+    color: var(--desert-sand);
+}
+a {
+    color: var(--white);
     display: inline-block;
     position: relative;
     text-decoration: none;
 }
-.topDiv a:after, .bottomDiv a:after {
+a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -35,12 +47,12 @@ body{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--celadon);
+    background-color: var(--periwinkle-crayola);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 
 }
-.topDiv a:hover:after, .bottomDiv a:hover:after {
+a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -67,7 +79,7 @@ body{
 }
 .optionOn {
     padding:5px;
-    background-color: black;
+    background-color: var(--true-blue);
     text-decoration:none;
     margin:5px;
     color: white;
@@ -76,7 +88,7 @@ body{
 }
 .optionOff {
     padding:5px;
-    background-color: var(--black);
+    background-color: var(--true-blue);
     color:white;
     text-decoration:none;
     margin:5px;
@@ -88,13 +100,14 @@ body{
     color:white;
     text-decoration:none;
     margin:5px;
+    border: none;
     font-size:20px;
-    margin:5px;
+    transition: background 0.2s;
 }
 .box{
     position: relative;
     display: block;
-    padding: 10px;
+    /*padding: 10px;*/
     margin-top: 5px;
     border-radius: 10px;
     background-color: var(--periwinkle-crayola);
@@ -104,6 +117,8 @@ body{
     margin-left: auto;
     margin-right: auto;
     transition: 0.3s all;
+    overflow-y: auto;
+    white-space: initial;
 }
 .box:hover {
     box-shadow: 5px 5px 18px black;
@@ -190,9 +205,72 @@ input {
     outline: none;
 }
 .bottomDiv {
-    background-color: black;
-    padding: 5px;
-    color: var(--desert-sand);
+    background-color: var(--true-blue);
+    color: var(--white);
     text-align: center;
+    padding: 5px;
+    position: static;
+    width: 100%;
+}
+.docs-sidebar {
+    width: 300px;
+    text-align: left;
+    max-height: 500px;
+    min-height: 600px;
+    overflow-y: auto;
+    color: white;
+    transition: all 0.25s ease-out;
+}
+.docs-sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--celadon);
+}
+.docs-sidebar::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+.docs-sidebar::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--celadon);
+}
+body::-webkit-scrollbar:vertical {
+    width: 15px;
+}
+.collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
 }
 
+.collapsible:after {
+    content: '\002B';
+    color: var(--periwinkle-crayola);
+    font-weight: normal;
+    margin-left: 0px;
+}
+
+.active:after {
+    content: "\2212";
+}
+button {
+    font-family: inherit;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--black)
+}
