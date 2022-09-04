@@ -13,33 +13,62 @@
             <a href="/start/login.html" class="optionOff">Login</a>
             <a href="https://jacute.xyz/" class="optionOff" target="_blank">Main Home</a>
         </div>
+        <br>
         <div class="docs-sidebar">
-            <p style="margin-left: 10px; font-size: 20px;">Documentation:</p>
-            <button
-                    style="
+            <div class="docs-overview">
+                <button
+                        style="
                         margin-left: 10px;
                         background-color: transparent;
                         border: none;
                         font-size: 20px;
-                        color: white;
-                        cursor: pointer;"
+                        color: var(--celadon);
+                        cursor: pointer;
+                        font-weight: 200;"
                         class="collapsible"
-                        id="docs-home-btn"
-            >
-                Home
-            </button>
-            <div class="content">
-                <ul>
-                    <li>
-                        <a href="pages/overview.html">Overview</a>
-                    </li>
-                    <li>
-                        <a href="pages/getting-started.html">Getting Started</a>
-                    </li>
-                    <li>
-                        <a href="pages/home.html">Home</a>
-                    </li>
-                </ul>
+                        id="docs-home-btn">
+                    Home
+
+                </button>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="pages/home/overview.html">Overview</a>
+                        </li>
+                        <li>
+                            <a href="pages/home/getting-started.html">Getting Started</a>
+                        </li>
+                        <li>
+                            <a href="pages/home/home.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="docs-setup">
+                <button
+                        style="
+                        margin-left: 10px;
+                        background-color: transparent;
+                        border: none;
+                        font-size: 20px;
+                        color: var(--celadon);
+                        cursor: pointer;
+                        font-weight: 200;"
+                        class="collapsible"
+                        id="docs-setup-btn"
+                >
+                    Setup
+                </button>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="pages/setup/with-js.html">With Javascript</a>
+                        </li>
+                        <li>
+                            <a href="pages/setup/with-php.html">With PHP</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="bottomDiv">
@@ -52,13 +81,13 @@
                     coll[i].addEventListener("click", function() {
                         this.classList.toggle("active");
                         const content = this.nextElementSibling;
-                        if (content.style.display === "flex") {
-                            content.style.display = "none";
+                        if (content.style.maxHeight){
+                            content.style.maxHeight = null;
                         } else {
-                            content.style.display = "flex";
+                            content.style.maxHeight = content.scrollHeight + "px";
                         }
                     });
-            }
+                }
         </script>
     </body>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Docs - ExcelWebDatabases</title>
+	<link rel="icon" href="/source/favicon.ico">
+	<link rel="stylesheet" href="/source/jacute.css">
+</head>
+<body>
+<div class="topDiv">
+	<p class="bt">Jacute Technologies</p>
+	<p class="mt">ExcelWebDatabases</p>
+	<a href="/documentation" class="optionOff">Back</a>
+	<a href="/" class="optionOn">ExcelWebDatabases</a>
+	<a href="https://jacute.xyz/" class="optionOff" target="_blank">Main Home</a>
+</div>
+<br>
+<div class="docs-sidebar">
+	<div class="docs-overview">
+		<button
+				style="
+                        margin-left: 10px;
+                        background-color: transparent;
+                        border: none;
+                        font-size: 20px;
+                        color: var(--celadon);
+                        cursor: pointer;
+                        font-weight: 200;"
+				class="collapsible"
+				id="docs-home-btn">
+			Home
+
+		</button>
+		<div class="content">
+			<ul>
+				<li>
+					<a href="overview.html">Overview</a>
+				</li>
+				<li>
+					<a href="getting-started.html">Getting Started</a>
+				</li>
+				<li>
+					<a style="color: var(--celadon); cursor: pointer">Home</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="docs-setup">
+		<button
+				style="
+                        margin-left: 10px;
+                        background-color: transparent;
+                        border: none;
+                        font-size: 20px;
+                        color: var(--celadon);
+                        cursor: pointer;
+                        font-weight: 200;"
+				class="collapsible"
+				id="docs-setup-btn"
+		>
+			Setup
+		</button>
+		<div class="content">
+			<ul>
+				<li>
+					<a href="/documentation/pages/setup/with-js.html">With Javascript</a>
+				</li>
+				<li>
+					<a href="/documentation/pages/setup/with-php.html">With PHP</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="bottomDiv">
+	<p>(c)2022 Jacute Technologies</p>
+	<a href="mailto:jacute@iota.ws">Contact</a>
+</div>
+<script>
+    const coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+</body>
+</html>

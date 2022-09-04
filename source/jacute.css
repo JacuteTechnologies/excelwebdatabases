@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&display=swap');
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: "Anek Telugu", sans-serif;
     padding:0;
     margin:0;
     background-color: var(--bg);
@@ -33,13 +33,13 @@ a {
 a:hover {
     color: var(--desert-sand);
 }
-.topDiv a, .bottomDiv a {
+a {
     color: var(--white);
     display: inline-block;
     position: relative;
     text-decoration: none;
 }
-.topDiv a:after, .bottomDiv a:after {
+a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -52,7 +52,7 @@ a:hover {
     transition: transform 0.25s ease-out;
 
 }
-.topDiv a:hover:after, .bottomDiv a:hover:after {
+a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -219,6 +219,7 @@ input {
     min-height: 600px;
     overflow-y: auto;
     color: white;
+    transition: all 0.25s ease-out;
 }
 .docs-sidebar::-webkit-scrollbar-thumb {
     background-color: var(--celadon);
@@ -238,12 +239,37 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar:vertical {
     width: 15px;
 }
+.collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: var(--periwinkle-crayola);
+    font-weight: normal;
+    margin-left: 0px;
+}
+
+.active:after {
+    content: "\2212";
+}
+button {
+    font-family: inherit;
+}
 
 .content {
-    transition: 0.3s all;
     padding: 0 18px;
-    display: none;
-    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--black)
