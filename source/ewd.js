@@ -4,12 +4,11 @@ let endpoint;
 function endpointInit(endpointURL){
     endpoint = endpointURL;
 }
-<<<<<<< HEAD
 // ugly frickin ass js code screw you James
 // james literally from 1700's fr
+
 function ewdRequest(mode, document, multi, cell, data) {
     let req = new XMLHttpRequest();
-=======
 // ugly ass js code ew so 1700 wth is this ew yucky desGUSTANG
 
 function ewdRequest(mode, document, multi, cell, data){
@@ -18,7 +17,7 @@ function ewdRequest(mode, document, multi, cell, data){
     xhttp.open("GET", url);
     xhttp.onreadystatechange = function(){
     const req = new XMLHttpRequest();
->>>>>>> 6658e4083df295d35523e89c6a281908c924e794
+
     let url = endpoint + "?mode=" + mode + "&document=" + document + "&multi=" + multi + "&cell=" + cell + "&data=" + data;
     req.open("GET", url);
     req.onreadystatechange = function () {
