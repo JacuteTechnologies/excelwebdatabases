@@ -4,6 +4,7 @@ let endpoint;
 function endpointInit(endpointURL){
     endpoint = endpointURL;
 }
+// ugly ass js code ew so 1700 wth is this ew yucky desGUSTANG
 
 function ewdRequest(mode, document, multi, cell, data){
     let xhttp = new XMLHttpRequest();
