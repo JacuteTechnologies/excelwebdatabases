@@ -2,7 +2,9 @@
     "name": "ezyang/htmlpurifier",
     "description": "Standards compliant HTML filter written in PHP",
     "type": "library",
-    "keywords": ["html"],
+    "keywords": [
+        "html"
+    ],
     "homepage": "http://htmlpurifier.org/",
     "license": "LGPL-2.1-or-later",
     "authors": [
@@ -16,8 +18,12 @@
         "php": ">=5.2"
     },
     "autoload": {
-        "psr-0": { "HTMLPurifier": "library/" },
-        "files": ["library/HTMLPurifier.composer.php"],
+        "psr-0": {
+            "HTMLPurifier": "library/"
+        },
+        "files": [
+            "library/HTMLPurifier.composer.php"
+        ],
         "exclude-from-classmap": [
             "/library/HTMLPurifier/Language/"
         ]

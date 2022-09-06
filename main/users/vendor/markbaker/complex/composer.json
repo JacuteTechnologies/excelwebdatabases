@@ -2,7 +2,10 @@
     "name": "markbaker/complex",
     "type": "library",
     "description": "PHP Class for working with complex numbers",
-    "keywords": ["complex", "mathematics"],
+    "keywords": [
+        "complex",
+        "mathematics"
+    ],
     "homepage": "https://github.com/MarkBaker/PHPComplex",
     "license": "MIT",
     "authors": [

@@ -13,11 +13,11 @@ First, and mainly, `SplEnum` is not integrated to PHP, you have to install the e
 
 Using an enum instead of class constants provides the following advantages:
 
-- You can use an enum as a parameter type: `function setAction(Action $action) {`
-- You can use an enum as a return type: `function getAction() : Action {`
-- You can enrich the enum with methods (e.g. `format`, `parse`, …)
-- You can extend the enum to add new values (make your enum `final` to prevent it)
-- You can get a list of all the possible values (see below)
+-   You can use an enum as a parameter type: `function setAction(Action $action) {`
+-   You can use an enum as a return type: `function getAction() : Action {`
+-   You can enrich the enum with methods (e.g. `format`, `parse`, …)
+-   You can extend the enum to add new values (make your enum `final` to prevent it)
+-   You can get a list of all the possible values (see below)
 
 This Enum class is not intended to replace class constants, but only to be used when it makes sense.
 
@@ -65,20 +65,20 @@ function setAction(Action $action) {
 
 ## Documentation
 
-- `__construct()` The constructor checks that the value exist in the enum
-- `__toString()` You can `echo $myValue`, it will display the enum value (value of the constant)
-- `getValue()` Returns the current value of the enum
-- `getKey()` Returns the key of the current value on Enum
-- `equals()` Tests whether enum instances are equal (returns `true` if enum values are equal, `false` otherwise)
+-   `__construct()` The constructor checks that the value exist in the enum
+-   `__toString()` You can `echo $myValue`, it will display the enum value (value of the constant)
+-   `getValue()` Returns the current value of the enum
+-   `getKey()` Returns the key of the current value on Enum
+-   `equals()` Tests whether enum instances are equal (returns `true` if enum values are equal, `false` otherwise)
 
 Static methods:
 
-- `toArray()` method Returns all possible values as an array (constant name in key, constant value in value)
-- `keys()` Returns the names (keys) of all constants in the Enum class
-- `values()` Returns instances of the Enum class of all Enum constants (constant name in key, Enum instance in value)
-- `isValid()` Check if tested value is valid on enum set
-- `isValidKey()` Check if tested key is valid on enum set
-- `search()` Return key for searched value
+-   `toArray()` method Returns all possible values as an array (constant name in key, constant value in value)
+-   `keys()` Returns the names (keys) of all constants in the Enum class
+-   `values()` Returns instances of the Enum class of all Enum constants (constant name in key, Enum instance in value)
+-   `isValid()` Check if tested value is valid on enum set
+-   `isValidKey()` Check if tested key is valid on enum set
+-   `search()` Return key for searched value
 
 ### Static methods
 
@@ -128,7 +128,7 @@ class Action extends Enum
 
 ## Related projects
 
-- [Doctrine enum mapping](https://github.com/acelaya/doctrine-enum-type)
-- [Symfony ParamConverter integration](https://github.com/Ex3v/MyCLabsEnumParamConverter)
-- [PHPStan integration](https://github.com/timeweb/phpstan-enum)
-- [Yii2 enum mapping](https://github.com/KartaviK/yii2-enum)
+-   [Doctrine enum mapping](https://github.com/acelaya/doctrine-enum-type)
+-   [Symfony ParamConverter integration](https://github.com/Ex3v/MyCLabsEnumParamConverter)
+-   [PHPStan integration](https://github.com/timeweb/phpstan-enum)
+-   [Yii2 enum mapping](https://github.com/KartaviK/yii2-enum)

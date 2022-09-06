@@ -2,7 +2,11 @@
     "name": "markbaker/matrix",
     "type": "library",
     "description": "PHP Class for working with matrices",
-    "keywords": ["matrix", "vector", "mathematics"],
+    "keywords": [
+        "matrix",
+        "vector",
+        "mathematics"
+    ],
     "homepage": "https://github.com/MarkBaker/PHPMatrix",
     "license": "MIT",
     "authors": [

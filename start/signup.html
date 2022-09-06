@@ -2,16 +2,20 @@
 <html lang="en">
     <head>
         <title>Jacute Technologies - ExcelWebDatabases</title>
-        <link rel="icon" href="/source/favicon.ico">
+        <link rel="icon" href="/source/favicon.ico" />
         <script src="https://www.google.com/recaptcha/api.js?render=6LclS6ohAAAAAFLHXInxx2UrrOtjRIHvBfs9B1Ki"></script>
         <script>
-            grecaptcha.ready(function() {
-                grecaptcha.execute("6LclS6ohAAAAAFLHXInxx2UrrOtjRIHvBfs9B1Ki", {action: "homepage"}).then(function(token) {
-                   document.getElementById("token").value = token;
-                });
-            });
+            grecaptcha.ready(function () {
+                grecaptcha
+                    .execute('6LclS6ohAAAAAFLHXInxx2UrrOtjRIHvBfs9B1Ki', {
+                        action: 'homepage',
+                    })
+                    .then(function (token) {
+                        document.getElementById('token').value = token
+                    })
+            })
         </script>
-        <link rel="stylesheet" href="/source/jacute.css">
+        <link rel="stylesheet" href="/source/jacute.css" />
     </head>
     <body>
         <div class="topDiv">
@@ -19,23 +23,42 @@
             <p class="mt">ExcelWebDatabases</p>
             <a href="/" class="optionOff">Back</a>
             <a href="/start/login.html" class="optionOff">Login</a>
-            <a href="https://jacute.xyz" class="optionOff" target="_blank">Main Home</a>
-            <br> <br>
+            <a href="https://jacute.xyz" class="optionOff" target="_blank"
+                >Main Home</a
+            >
+            <br />
+            <br />
         </div>
-        <br> <br>
+        <br />
+        <br />
         <div class="box">
-            <p style="font-size:50px"><img src="/source/excel.png" style="width:40px">ExcelWebDatabases</p>
-            <p style="font-size:35px">Getting Started: Please Generate an API key</p>
-            <p>Once generated, you will be redirected to receive your API Key.</p>
+            <p style="font-size: 50px">
+                <img
+                    src="/source/excel.png"
+                    style="width: 40px"
+                />ExcelWebDatabases
+            </p>
+            <p style="font-size: 35px">
+                Getting Started: Please Generate an API key
+            </p>
+            <p>
+                Once generated, you will be redirected to receive your API Key.
+            </p>
             <form action="/main/users/process.php" method="POST">
-                <input type="submit" value="Generate API Key" class="input" id="generate-input">
-                <input type="hidden" id="token" name="token">
+                <input
+                    type="submit"
+                    value="Generate API Key"
+                    class="input"
+                    id="generate-input"
+                />
+                <input type="hidden" id="token" name="token" />
             </form>
         </div>
-        <br> <br>
+        <br />
+        <br />
         <div class="bottomDiv">
-        <p>(c)2022 Jacute Technologies</p>
-        <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>
+            <p>(c)2022 Jacute Technologies</p>
+            <a href="mailto:jacute@iota.ws" style="color: white">Contact</a>
         </div>
     </body>
 </html>

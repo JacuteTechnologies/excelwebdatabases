@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&display=swap');
-body{
-    font-family: "Anek Telugu", sans-serif;
-    padding:0;
-    margin:0;
+body {
+    font-family: 'Anek Telugu', sans-serif;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     background-color: var(--bg);
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
+    height: 100%;
     overscroll-behavior: none;
+}
+html {
+    height: 100%;
 }
 :root {
     --black: #000000ff;
@@ -17,15 +21,14 @@ body{
     --periwinkle-crayola: #c6d2edff;
     --desert-sand: #ddbea8ff;
     --bg: #22272e;
-    --white: #FFFFFF;
+    --white: #ffffff;
 }
-
 
 .topDiv {
     background-color: var(--true-blue);
     color: var(--white);
-    padding:5px;
-    text-align:center;
+    padding: 5px;
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -52,61 +55,60 @@ a:after {
     background-color: var(--periwinkle-crayola);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-
 }
 a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 .bt {
-    font-size:80px;
-    margin:10px;
+    font-size: 80px;
+    margin: 10px;
 }
 .mt {
-    font-size:40px;
-    margin:10px;
+    font-size: 40px;
+    margin: 10px;
 }
 .itemDiv {
-    width:900px;
+    width: 900px;
     background-color: var(--desert-sand);
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-.itemTitleText{
-    font-size:20px;
+.itemTitleText {
+    font-size: 20px;
 }
 .itemText {
-    font-size:15px;
+    font-size: 15px;
 }
 .optionOn {
-    padding:5px;
+    padding: 5px;
     background-color: var(--true-blue);
-    text-decoration:none;
-    margin:5px;
+    text-decoration: none;
+    margin: 5px;
     color: white;
     border-radius: 5px;
-    font-size:20px;
+    font-size: 20px;
 }
 .optionOff {
-    padding:5px;
+    padding: 5px;
     background-color: var(--true-blue);
-    color:white;
-    text-decoration:none;
-    margin:5px;
-    font-size:20px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 20px;
 }
 .btn {
-    padding:5px;
+    padding: 5px;
     background-color: transparent;
-    color:white;
-    text-decoration:none;
-    margin:5px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
     border: none;
-    font-size:20px;
+    font-size: 20px;
     transition: background 0.2s;
 }
-.box{
+.box {
     position: relative;
     display: block;
     /*padding: 10px;*/
@@ -126,8 +128,9 @@ a:hover:after {
     box-shadow: 5px 5px 18px black;
 }
 
-#mainpage-box, .overlay {
-    transition: .3s ease;
+#mainpage-box,
+.overlay {
+    transition: 0.3s ease;
     border-radius: 15px;
 }
 .overlay {
@@ -139,11 +142,10 @@ a:hover:after {
     opacity: 0;
     justify-content: center;
     max-width: 100%;
-
 }
 #mainpage-box:hover {
     color: transparent;
-    text-shadow: 0 0 7px rgba(0,0,0,0.7);
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
     opacity: 1;
 }
 #mainpage-box:hover img {
@@ -160,7 +162,7 @@ a:hover:after {
     background-color: transparent;
     border-radius: 5px;
     font-size: 30px;
-    text-shadow:none;
+    text-shadow: none;
 }
 
 img {
@@ -209,19 +211,20 @@ input {
 .bottomDiv {
     background-color: var(--true-blue);
     color: var(--white);
-    display: block;
+    position: relative;
+    padding: 5px;
     text-align: center;
-    margin-top: 30px;
-    padding: 50px;
-    height: 50px;
+    margin-top: 10px;
 }
 .docs-sidebar {
     width: 300px;
+    max-height: 600px;
     text-align: left;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     color: white;
     transition: all 0.25s ease-out;
+    overscroll-behavior: contain;
 }
 .docs-sidebar::-webkit-scrollbar-thumb {
     background-color: var(--celadon);
@@ -260,7 +263,7 @@ body::-webkit-scrollbar:vertical {
 }
 
 .active:after {
-    content: "\2212";
+    content: '\2212';
 }
 button {
     font-family: inherit;
@@ -274,5 +277,5 @@ button {
     background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--black)
+    background-color: var(--black);
 }
