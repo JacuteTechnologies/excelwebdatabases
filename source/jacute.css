@@ -110,9 +110,6 @@ a:hover:after {
 }
 .box {
     position: relative;
-    display: block;
-    /*padding: 10px;*/
-    margin-top: 5px;
     border-radius: 10px;
     background-color: var(--periwinkle-crayola);
     width: 800px;
@@ -278,4 +275,20 @@ button {
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--black);
+}
+.page {
+    display: flex;
+}
+.page:first-child {
+    margin-right: 10px;
+}
+#docs-box {
+    margin-top: 50px;
+    margin-left: 80px;
+
+    background-color: var(--bg);
+    color: var(--desert-sand)
+}
+#docs-box h1 {
+    color: var(--celadon)
 }
