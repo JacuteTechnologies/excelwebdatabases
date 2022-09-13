@@ -6,101 +6,170 @@
         <link rel="stylesheet" href="/source/jacute.css" />
     </head>
     <body>
-        <div class="topDiv">
-            <p class="bt">Jacute Technologies</p>
-            <p class="mt">ExcelWebDatabases</p>
-            <a href="/documentation" class="optionOff">Back</a>
-            <a href="/" class="optionOn">ExcelWebDatabases</a>
-            <a href="https://jacute.xyz/" class="optionOff" target="_blank"
-                >Main Home</a
-            >
-        </div>
-        <br />
-        <div class="docs-sidebar">
-            <div class="docs-overview">
-                <button
-                    style="
-                        margin-left: 10px;
-                        background-color: transparent;
-                        border: none;
-                        font-size: 20px;
-                        color: var(--celadon);
-                        cursor: pointer;
-                        font-weight: 200;
-                    "
-                    class="collapsible"
-                    id="docs-home-btn"
+        <div id="app">
+            <div class="topDiv">
+                <p class="bt">Jacute Technologies</p>
+                <p class="mt">ExcelWebDatabases</p>
+                <a href="/" class="optionOn">ExcelWebDatabases</a>
+                <a href="/start/login.html" class="optionOff">Login</a>
+                <a href="https://jacute.xyz/" class="optionOff" target="_blank"
+                    >Main Home</a
                 >
-                    Home
-                </button>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <a href="/documentation/pages/home/overview.html"
-                                >Overview</a
+            </div>
+            <div class="page">
+                <div class="sidebar-wrapper" style="float: left">
+                    <div class="docs-sidebar">
+                        <div class="docs-overview">
+                            <button
+                                style="
+                                    margin-left: 10px;
+                                    background-color: transparent;
+                                    border: none;
+                                    font-size: 20px;
+                                    color: var(--celadon);
+                                    cursor: pointer;
+                                    font-weight: 200;
+                                "
+                                class="collapsible"
+                                id="docs-home-btn"
                             >
-                        </li>
-                        <li>
-                            <a
-                                href="/documentation/pages/home/getting-started.html"
-                                >Getting Started</a
+                                Home
+                            </button>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="/documentation/pages/home/overview.html"
+                                            >Overview</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/documentation/pages/home/getting-started.html"
+                                            >Getting Started</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/documentation/pages/home/home.html"
+                                            >Home</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="docs-setup">
+                            <button
+                                style="
+                                    margin-left: 10px;
+                                    background-color: transparent;
+                                    border: none;
+                                    font-size: 20px;
+                                    color: var(--celadon);
+                                    cursor: pointer;
+                                    font-weight: 200;
+                                "
+                                class="collapsible"
+                                id="docs-setup-btn"
                             >
-                        </li>
-                        <li>
-                            <a href="/documentation/pages/home/home.html"
-                                >Home</a
-                            >
-                        </li>
+                                Setup
+                            </button>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <a
+                                            style="
+                                                cursor: pointer;
+                                                color: var(--celadon);
+                                            "
+                                            >With Javascript</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="with-php.html">With PHP</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="box"
+                    id="docs-box"
+                    style="
+                        min-height: 450px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    "
+                >
+                    <h1 style="font-size: 40px">
+                        <img src="/source/excel.png" />ExcelWebDatabases
+                        Documentation
+                    </h1>
+                    <h2
+                        style="
+                            text-align: left;
+                            position: relative;
+                            font-weight: 700;
+                            font-size: 30px;
+                            margin-top: 2em;
+                            margin-bottom: 10px;
+                            line-height: 1.33333;
+                            margin-left: 15px;
+                        "
+                    >
+                        WHAT IS POSSIBLE?
+                    </h2>
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        With ExcelWebDatabases, you can upload an Excel
+                        spreadsheet and access it through a web API, making it
+                        like a web databases. It is theoretially usable via any
+                        language that is capable of making a web request, and a
+                        JS library is available.
+                    </p>
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        This documentation will demonstrate the read/write
+                        capabilities of the ExcelWebDatabases API, such as...
+                    </p>
+                    <ul style="float: left; font-size: 19px; color: var(--bg)">
+                        <li>Reading one cell at a time</li>
+                        <li>Reading multiple cells at a time</li>
+                        <li>Writing one cell at a time</li>
+                        <li>Writing more than one cell at a time</li>
                     </ul>
                 </div>
             </div>
-            <div class="docs-setup">
-                <button
-                    style="
-                        margin-left: 10px;
-                        background-color: transparent;
-                        border: none;
-                        font-size: 20px;
-                        color: var(--celadon);
-                        cursor: pointer;
-                        font-weight: 200;
-                    "
-                    class="collapsible"
-                    id="docs-setup-btn"
-                >
-                    Setup
-                </button>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <a style="cursor: pointer; color: var(--celadon)"
-                                >With Javascript</a
-                            >
-                        </li>
-                        <li>
-                            <a href="with-php.html">With PHP</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="bottomDiv">
+                <p>(c)2022 Jacute Technologies</p>
+                <a href="mailto:jacute@iota.ws">Contact</a>
             </div>
+            <script>
+                const coll = document.getElementsByClassName('collapsible')
+                for (let i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener('click', function () {
+                        this.classList.toggle('active')
+                        const content = this.nextElementSibling
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null
+                        } else {
+                            content.style.maxHeight =
+                                content.scrollHeight + 'px'
+                        }
+                    })
+                }
+            </script>
         </div>
-        <div class="bottomDiv">
-            <p>(c)2022 Jacute Technologies</p>
-            <a href="mailto:jacute@iota.ws">Contact</a>
-        </div>
-        <script>
-            const coll = document.getElementsByClassName('collapsible')
-            for (let i = 0; i < coll.length; i++) {
-                coll[i].addEventListener('click', function () {
-                    this.classList.toggle('active')
-                    const content = this.nextElementSibling
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + 'px'
-                    }
-                })
-            }
-        </script>
     </body>
 </html>

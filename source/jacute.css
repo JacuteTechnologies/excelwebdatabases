@@ -287,8 +287,8 @@ button {
     margin-left: 80px;
 
     background-color: var(--bg);
-    color: var(--desert-sand)
+    color: var(--desert-sand);
 }
 #docs-box h1 {
-    color: var(--celadon)
+    color: var(--celadon);
 }
