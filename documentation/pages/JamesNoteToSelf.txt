@@ -1,0 +1,2 @@
+clean up redirs with header()
+add index.phps
