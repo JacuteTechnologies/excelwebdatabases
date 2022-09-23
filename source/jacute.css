@@ -215,7 +215,7 @@ input {
     margin-top: 10px;
 }
 .docs-sidebar {
-    width: 100%;
+    width: 120%;
     max-height: 70%;
     text-align: left;
     overflow-y: scroll;
