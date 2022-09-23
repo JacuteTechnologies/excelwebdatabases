@@ -100,6 +100,9 @@
                         min-height: 450px;
                         margin-top: 20px;
                         margin-bottom: 20px;
+                        margin-left:auto;
+                        margin-right:auto;
+                        display:block;
                     "
                 >
                     <h1 style="font-size: 40px">
@@ -118,7 +121,7 @@
                             margin-left: 15px;
                         "
                     >
-                        WHAT IS POSSIBLE?
+                        Setup the JS library
                     </h2>
                     <p
                         style="
@@ -127,11 +130,7 @@
                             margin-left: 25px;
                         "
                     >
-                        With ExcelWebDatabases, you can upload an Excel
-                        spreadsheet and access it through a web API, making it
-                        like a web databases. It is theoretially usable via any
-                        language that is capable of making a web request, and a
-                        JS library is available.
+                        First, download <a href="https://s.jacute.xyz/main/users/endpoint.php" download>endpoint.php</a> and configure it with your key by replacing the first line of "YOUR_KEY_HERE" with your key. Upload it to your web server and get the endpoint url.
                     </p>
                     <p
                         style="
@@ -140,15 +139,155 @@
                             margin-left: 25px;
                         "
                     >
-                        This documentation will demonstrate the read/write
-                        capabilities of the ExcelWebDatabases API, such as...
+                        Next, include the JS library in your code.
                     </p>
-                    <ul style="float: left; font-size: 19px; color: var(--bg)">
-                        <li>Reading one cell at a time</li>
-                        <li>Reading multiple cells at a time</li>
-                        <li>Writing one cell at a time</li>
-                        <li>Writing more than one cell at a time</li>
-                    </ul>
+                    <img src="/source/html.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        Now initialize the library with the location of your endpoint.php, eg https://yourdomain.local/ewd/endpoint.php
+                    </p>
+                    <img src="/source/endpointInit.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        You are ready to begin using the library. The main function is ewdRequest, which has the following parameters:
+                    </p>
+                    <img src="/source/ewdRequestParams.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        It will return JSON. The response depends on the action you are taking.
+                    </p>
+                    <h2
+                        style="
+                            text-align: left;
+                            position: relative;
+                            font-weight: 700;
+                            font-size: 30px;
+                            margin-top: 2em;
+                            margin-bottom: 10px;
+                            line-height: 1.33333;
+                            margin-left: 15px;
+                        "
+                    >
+                        Reading cells examples
+                    </h2>
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        To read a single cell, execute the below command, and replace the key, document name, and cell to read with your own.
+                    </p>
+                    <img src="/source/readSingle.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        It will return JSON. An example response is:
+                    </p>
+                    <img src="/source/readSingleResponse.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        To read multiple cells, you will be doing the same thing, except providing a range like you would in Excel (eg. A1:B2).
+                    </p>
+                    <img src="/source/readMulti.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        It will return JSON with data by row and column depending on what you requested. Example:
+                    </p>
+                    <img src="/source/readMultiResponse.png" style="width:700px">
+                    <h2
+                        style="
+                            text-align: left;
+                            position: relative;
+                            font-weight: 700;
+                            font-size: 30px;
+                            margin-top: 2em;
+                            margin-bottom: 10px;
+                            line-height: 1.33333;
+                            margin-left: 15px;
+                        "
+                    >
+                        Writing cells examples
+                    </h2>
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        Writing to cells uses the 5th parameter, the data parameter. To write to a single cell, use the below format with your own data:
+                    </p>
+                    <img src="/source/writeSingle.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        It will return JSON indicating success
+                    </p>
+                    <img src="/source/writeResponse.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        To write to multiple cells, it is trickier. You will provide the top left cell of the cells you are writing to. Then you will provide a JSON array of data based on the cell you provided. Example:
+                    </p>
+                    <img src="/source/writeMulti.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        That would write to the cells A1, A2, B1, and B2. JSON indicating success will be returned.
+                    </p>
+                    <img src="/source/writeResponse.png" style="width:700px">
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        That's all! Simple, really.
+                    </p>
                 </div>
             </div>
             <div class="bottomDiv">
