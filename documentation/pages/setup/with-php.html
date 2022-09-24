@@ -123,7 +123,7 @@
                             margin-left: 15px;
                         "
                     >
-                        WHAT IS POSSIBLE?
+                        PHP Examples, API endpoint URL with parameters
                     </h2>
                     <p
                         style="
@@ -132,30 +132,176 @@
                             margin-left: 25px;
                         "
                     >
-                        With ExcelWebDatabases, you can upload an Excel
-                        spreadsheet and access it through a web API, making it
-                        like a web databases. It is theoretially usable via any
-                        language that is capable of making a web request, and a
-                        JS library is available.
+                        ExcelWebDatabases uses an API w/ GET requests which returns JSON. The API endpoint is:
                     </p>
+                    <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D%2526mode%253D%2526document%253D%2526isMulti%253D%2526cell%253D%2526data%253D"
+  style="width: 664px; height: 206px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+                <p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                The parameters are: 
+                </p>
+                <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=mode%253Dr%252Fw%250Adocument%253Dname.xlsx%250AisMulti%253Dtrue%252Ffalse%250Acell%253DCellName%252FA1%252FB4%250Adata%253DJSON%252F%255B%255B1%252C2%255D%252C%255B3%252C4%255D%255D%250Akey%253Dyour_api_key"
+  style="width: 664px; height: 281px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
                     <p
+                    style="
+                        font-size: 19px;
+                        text-align: left;
+                        margin-left: 25px;
+                    "
+                    >
+                    Key is your API key. Mode is read/write, defined by "r" or "w". Document is the name of the document you would like to access. isMultiis a boolean, on whether you are accessing an individual cell or multiple cells in one request. Cell is an Excel cell, ex. A4, B1, etc. Data is only provided if it is a write request, and is JSON.
+                    </p>
+                    <h2
                         style="
-                            font-size: 19px;
                             text-align: left;
-                            margin-left: 25px;
+                            position: relative;
+                            font-weight: 700;
+                            font-size: 30px;
+                            margin-top: 2em;
+                            margin-bottom: 10px;
+                            line-height: 1.33333;
+                            margin-left: 15px;
                         "
                     >
-                        This documentation will demonstrate the read/write
-                        capabilities of the ExcelWebDatabases API, such as...
-                    </p>
-                    <ul style="float: left; font-size: 19px; color: var(--bg)">
-                        <li>Reading one cell at a time</li>
-                        <li>Reading multiple cells at a time</li>
-                        <li>Writing one cell at a time</li>
-                        <li>Writing more than one cell at a time</li>
-                    </ul>
+                        Read requests
+                    </h2>
+                    <p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                When making a read request: If you are reading a single cell provide the cell's name in the cell parameter and set isMulti to false. If you are reading multiple cells provide an Excel range, like A1:B5 as you would in Excel. The API will return JSON. Set isMulti to true. Examples:
+                </p>
+                <p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                Single cell read response:
+                </p>
+                <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%2522success%2522%253A%2520true%252C%2520%2522data%2522%253A%25203%255D"
+  style="width: 369px; height: 188px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+                <p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                Multiple cell read response:
+                </p>
+                <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%25221%2522%253A%257B%2522A%2522%253A3%252C%2522B%2522%253A4%257D%252C%25222%2522%253A%257B%2522A%2522%253A5%252C%2522B%2522%253A6%257D%257D"
+  style="width: 664px; height: 188px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+<h2
+                        style="
+                            text-align: left;
+                            position: relative;
+                            font-weight: 700;
+                            font-size: 30px;
+                            margin-top: 2em;
+                            margin-bottom: 10px;
+                            line-height: 1.33333;
+                            margin-left: 15px;
+                        "
+                    >
+                        Write requests
+                    </h2>
+                    <p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                To write to a single cell, put the cell in the cell parameter and the value in the data parameter. Set isMulti to false. It will return a JSON response indicating success.
+                </p>
+                <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%2522success%2522%253Atrue%252C%2522data%2522%253A%2522Success%2522%255D"
+  style="width: 664px; height: 188px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+<p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                To write to multiple cells, set the cell parameter to the top left cell you are writing to. Set isMulti to true. Set data to a JSON array of the cells, where the top left in the JSON is the top left cell that you put.
+                </p>
+                <p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                Example of JSON to put in the data parameter:
+                </p>
+                <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%255B1%252C2%255D%252C%255B3%252C4%255D%255D"
+  style="width: 664px; height: 188px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+<p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                In that case, if cell=A1, then A1 would be set to one, A2 would be set to two, B1 would be set to three, and B2 would be set to four. It will return JSON indicating success.
+                </p>
+                <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%2522success%2522%253Atrue%252C%2522data%2522%253A%2522Success%2522%255D"
+  style="width: 664px; height: 188px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+                <h2
+                style="
+                    text-align: left;
+                    position: relative;
+                    font-weight: 700;
+                    font-size: 30px;
+                    margin-top: 2em;
+                    margin-bottom: 10px;
+                    line-height: 1.33333;
+                    margin-left: 15px;
+                "
+                >
+                PHP examples:
+                </h2>
+                <p
+                style="
+                    font-size: 19px;
+                    text-align: left;
+                    margin-left: 25px;
+                "
+                >
+                DEV NOTE: These aren't here yet.
+                </p>
                 </div>
-                
             </div>
             <div class="bottomDiv">
                 <p>(c)2022 Jacute Technologies</p>
