@@ -22,6 +22,8 @@ html {
     --desert-sand: #ddbea8ff;
     --bg: #22272e;
     --white: #ffffff;
+    --c-bg-light: #2b313a;
+    --font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 .topDiv {
@@ -291,4 +293,14 @@ button {
 #docs-box h1 {
     color: var(--celadon);
 }
+code {
+    color: #f3f4f6;
+    background-color: var(--c-bg-light);
+    font-family: var(--font-family-code);
+    font-size: 15px;
+    padding: .25rem .5rem;
 
+}
+#docs-box:hover {
+    box-shadow: none;
+}
