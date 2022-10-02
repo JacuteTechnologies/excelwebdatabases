@@ -1,6 +1,6 @@
 //client side library - no api key here
 //use endpointInit and pass the url where your endpoint.php is configured
-let endpoint;
+let endpoint
 function endpointInit(endpointURL) {
     endpoint = endpointURL
 }

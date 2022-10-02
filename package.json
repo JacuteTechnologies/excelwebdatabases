@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "yarn prettier --write .",
-        "dev":  "npx serve"
+        "dev": "npx serve"
     },
     "repository": {
         "type": "git",

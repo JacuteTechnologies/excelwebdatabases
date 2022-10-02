@@ -5,7 +5,7 @@
         <link rel="icon" href="/source/favicon.ico" />
         <link rel="stylesheet" href="/source/jacute.css" />
     </head>
-    <body>
+    <body style="overflow: hidden">
         <div id="app">
             <div class="topDiv">
                 <p class="bt">Jacute Technologies</p>
@@ -38,7 +38,7 @@
                             <div class="content">
                                 <ul>
                                     <li>
-                                        <a>Overview</a>
+                                        <a href="overview.html">Overview</a>
                                     </li>
                                     <li>
                                         <a
@@ -93,15 +93,9 @@
                     class="box"
                     id="docs-box"
                     style="
-                        min-height: 40%;
-                        margin-top: 2.5%;
-                        margin-bottom: 2.5% ;
-                        min-height: 450px;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                        margin-left:auto;
-                        margin-right:auto;
-                        display:block;
+                        display: block;
+                        color: var(--white);
+                        text-align: left;
                     "
                 >
                     <h1 style="font-size: 40px">
@@ -129,7 +123,10 @@
                             margin-left: 25px;
                         "
                     >
-                        Before setting up the programming, you first need to login to your ExcelWebDatabases account and upload the file you want to be your database. Keep the file name and the document name on hand.
+                        Before setting up the programming, you first need to
+                        login to your ExcelWebDatabases account and upload the
+                        file you want to be your database. Keep the file name
+                        and the document name on hand.
                     </p>
                     <p
                         style="
@@ -138,17 +135,22 @@
                             margin-left: 25px;
                         "
                     >
-                        Next, you need to connect your program to the API. The API uses GET requests, and will return JSON. A JS library is available, and PHP examples are also available. However, all that is necessary is a GET request. See "PHP examples" for the endpoint URL w/ parameters.
+                        Next, you need to connect your program to the API. The
+                        API uses GET requests, and will return JSON. A JS
+                        library is available, and PHP examples are also
+                        available. However, all that is necessary is a GET
+                        request. See "PHP examples" for the endpoint URL w/
+                        parameters.
                     </p>
-                    <ul style="float: left; font-size: 19px; color: var(--bg)">
-                        <li><a href="setup/with-js.html">Javascript library docs</a></li>
+                    <h2>Quick-Access Documentation:</h2>
+                    <ul style="float: left; font-size: 19px; color: var(--lighter-blue)">
+                        <li>
+                            <a href="setup/with-js.html"
+                                >Javascript library docs</a>
+                        </li>
                         <li><a href="setup/with-php.html">PHP examples</a></li>
+                    </ul>
                 </div>
-                
-            </div>
-            <div class="bottomDiv">
-                <p>(c)2022 Jacute Technologies</p>
-                <a href="mailto:jacute@iota.ws">Contact</a>
             </div>
             <script>
                 const coll = document.getElementsByClassName('collapsible')

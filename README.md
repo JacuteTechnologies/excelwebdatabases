@@ -8,7 +8,6 @@ Finish PHP documentation
 
 Update security so it doesn't suck
 
-Both: 
+Both:
 
 The main page needs to be spiced up a bit.
-
