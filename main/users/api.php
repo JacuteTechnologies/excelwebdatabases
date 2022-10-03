@@ -37,15 +37,15 @@ if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && is
                             TRUE         
                         );
                         $j = json_encode($dataArray);
-                        echo "['success': true, 'data': $j]";
+                        echo "{'success': true, 'data': $j}";
                     }
                     else{
-                        echo '["success": false, "data": "Invalid cell range given"]';
+                        echo '{"success": false, "data": "Invalid cell range given"}';
                     }
                 }
             }
             else{
-                echo '["success": false, "data": "Document does not exist"]';
+                echo '{"success": false, "data": "Document does not exist"}';
             }
         }
         else if($mode == "w"){
@@ -60,7 +60,7 @@ if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && is
                     $spreadsheet->getActiveSheet()->setCellValue($cell, $data);
                     $writer = new Xlsx($spreadsheet);
                     $writer->save($key."/".$document);
-                    echo '["success": true, "data": "Success"]';
+                    echo '{"success": true, "data": "Success"}';
                 }
                 else{
                     //multi cell
@@ -71,7 +71,7 @@ if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && is
                             $success = true;
                         }
                         catch(Exception $e){
-                            echo '["success": false, "data": "Invalid JSON"]';
+                            echo '{"success": false, "data": "Invalid JSON"}';
                             $success = false;
                         }
                         if($success == true){
@@ -83,21 +83,21 @@ if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && is
                             );
                             $writer = new Xlsx($spreadsheet);
                             $writer->save($key."/".$document);
-                            echo '["success": true, "data": "Success"]';
+                            echo '{"success": true, "data": "Success"}';
                         }
                     }
                     else{
-                        echo '["success": false, "data": "Data not set"]';
+                        echo '{"success": false, "data": "Data not set"}';
                     }
                 }
             }
             else{
-                echo '["success": false, "data": "Document does not exist"]';
+                echo '{"success": false, "data": "Document does not exist"}';
             }
         }
     }
     else{
-        echo '["success": false, "data": "API Key does not exist"]';
+        echo '{"success": false, "data": "API Key does not exist"}';
     }
 }
 ?>
