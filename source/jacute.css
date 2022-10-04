@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&display=swap');
 body {
-    font-family: 'Anek Telugu', sans-serif;
+    /*font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";*/
+    font-family: "Anek Telugu", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     background-color: var(--bg);
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,7 @@ html {
     --desert-sand: #ddbea8ff;
     --lighter-blue: #3b7acc;
     --bg: #22272e;
+    --c-bg: #1d1d1d;
     --white: #ffffff;
     --c-bg-light: #2b313a;
     --font-family-code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
@@ -115,17 +116,14 @@ a:hover:after {
     transition: background 0.2s;
 }
 .box {
-    position: relative;
+    position: absolute;
     border-radius: 10px;
     background-color: var(--periwinkle-crayola);
-    width: 55%;
-    max-height: 60%;
+    margin: 330px 200px 0 3 00px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2.5%;
-    transition: 0.3s all;
+    width: 60%;
     overflow-y: auto;
+    transition: 0.3s all;
     white-space: initial;
 }
 .box:hover {
@@ -215,45 +213,41 @@ input {
 .bottomDiv {
     background-color: var(--true-blue);
     color: var(--white);
-    margin-top: auto;
+    top: 800px;
+    position: absolute;
     width: 100%;
     height: 80px;
     text-align: center;
 }
 .docs-sidebar {
     left: 0;
-    right: 0;
-    position: fixed;
+    position: absolute;
     text-align: left;
-    width: 30%;
-    height: 100vh;
+    width: 20%;
+    height: 70%;
     overflow-y: scroll;
-    overflow-x: hidden;
     color: var(--white);
-    border: var(--celadon) 5px;
     transition: all 0.25s ease-out;
     overscroll-behavior: contain;
 }
 .docs-sidebar::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, #docs-box::-webkit-scrollbar-thumb {
     background-color: var(--lighter-blue);
 }
 .docs-sidebar::-webkit-scrollbar:vertical,
 body::-webkit-scrollbar:vertical {
     width: 11px;
 }
+#docs-box::-webkit-scrollbar:vertical {
+    width: 20px;
+}
 .docs-sidebar::-webkit-scrollbar,
 body::-webkit-scrollbar {
     -webkit-appearance: none;
+    background-color: var(--c-bg);
 }
 #docs-box::-webkit-scrollbar {
     -webkit-appearance: none;
-}
-#docs-box::-webkit-scrollbar-thumb {
-    background-color: var(--lighter-blue);
-}
-#docs-box::-webkit-scrollbar:vertical {
-    width: 10px;
 }
 .collapsible {
     color: var(--white);
@@ -295,15 +289,13 @@ button {
     margin-right: 10px;
 }
 #docs-box {
-    margin-left: 200px;
-    right: 0;
+    position: absolute;
+    height: 70%;
     width: 70%;
-    height: 100vh;
     background-color: var(--bg);
-    color: var(--desert-sand);
-    overflow-x: hidden;
+    color: var(--white);
     overflow-y: scroll;
-    position: fixed;
+    right: 0;
 }
 #docs-box h1 {
     color: var(--celadon);
