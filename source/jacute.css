@@ -119,7 +119,7 @@ a:hover:after {
     position: absolute;
     border-radius: 10px;
     background-color: var(--periwinkle-crayola);
-    margin: 330px 200px 0 3 00px;
+    margin: 330px 200px 0 300px;
     text-align: center;
     width: 60%;
     overflow-y: auto;
