@@ -4,8 +4,16 @@ if(checkCaptcha($recaptcha)){
 //    succeed
     $k = file_get_contents("keys.txt");
     $r = mt_rand(100000000000000, 999999999999999);
+    $r2 = mt_rand(100000000000000, 999999999999999);
+    $h = md5($r);
+    $r3 = $h.$r2;
+    $r4 = md5($r3);
+    $r = $r4;
     if(strpos($k, $r) === false){
         file_put_contents("keys.txt", $k."\n".$r);
+    }
+    else{
+        header("Location:https://s.jacute.xyz/error/?e=Error 205 - Key generation failed");
     }
    $key = "EWD".$r."K";
    mkdir($key);
