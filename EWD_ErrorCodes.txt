@@ -1,0 +1,28 @@
+Reference for EWD response codes in the newer APIs (older APIs may give different codes):
+
+9100 No request type given.*
+
+9101 Invalid request type.
+
+9102 Missing parameters.
+
+9103 Invalid key.
+
+9104 Read successful.
+
+9105 Invalid cell range given.
+
+9106 Document does not exist.
+
+9107 Write successful.
+
+9108 Invalid JSON.
+
+9109 Data not set.
+
+9110 Request type does not match data sent.
+
+*Code no longer in use.
+
+
+
