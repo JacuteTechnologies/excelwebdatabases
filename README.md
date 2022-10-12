@@ -10,4 +10,7 @@ Lets do this.
 . ADD MORE COOL **EFFECTS** TO PAGES :)
 
 **JAMES**
-. WHATEVER IDK DO UR THING MAN.
+. Adding a second option for API: Similar to SQL, but not quite the same. Name your rows and colums (which will be stored in a different file format [not JSON or CMSS {sadly}], because editing JSON is a pain in PHP), and then make requests through a Javascript library like getSquare("vacuum-19", "price"), or getSquare("datapoint-14", "trial-3"). I think you can see how this will be helpful.
+
+
+SID: YOU DO NOT NEED TO SPEND TIME MAKING YOUR OWN CODE TEMPLATES. CARBON IS WORKING JUST FINE. 
