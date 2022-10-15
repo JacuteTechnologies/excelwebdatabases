@@ -7,7 +7,7 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 $success = true;
 //Check params
-if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && isset($_GET["isMulti"]) && isset($_GET["requestType"]){
+if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && isset($_GET["isMulti"]) && isset($_GET["requestType"])){
     //get request type, determine cell(s)
     if($_GET["requestType"] == "cell"){
         if(isset($_GET["cell"])){
