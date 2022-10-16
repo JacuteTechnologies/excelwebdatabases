@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Docs - ExcelWebDatabases</title>
+        <link rel="icon" href="/source/favicon.ico" />
+        <link rel="stylesheet" href="/source/jacute.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <div class="content-wrapper">
+                    <header class="navbar">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-links-wrapper">
+                                <div class="navbar-links-container">
+                                    <nav>
+                                        <div class="navbar-links-item">
+                                            <span>
+                                                <a href="/" class="router-link">
+                                                    Home
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="navbar-links-item">
+                                            <span>
+                                                <a
+                                                    href="/documentation/"
+                                                    class="router-link-active"
+                                                >
+                                                    Documentation
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="navbar-links-item">
+                                            <a
+                                                href="/documentation/pages/with-php/"
+                                                >With-PHP</a
+                                            >
+                                        </div>
+                                        <div class="navbar-links-item">
+                                            <a>Github?</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <!--                                <div class="navbar-links-container">-->
+                                <!--                                    <button class="toggle-dark-button">-->
+                                <!--                                        <svg class="icon light-icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg>-->
+                                <!--                                        <svg class="icon dark-icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg>-->
+                                <!--                                    </button>-->
+                                <!--                                </div>-->
+                            </div>
+                        </div>
+                    </header>
+                    <div class="sidebar-wrapper" style="float: left">
+                        <aside class="sidebar">
+                            <ul class="sidebar-links">
+                                <p class="sidebar-item sidebar-heading">Home</p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="/documentation/"
+                                            class="sidebar-item">
+                                            Documentation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/documentation/pages/with-js/"
+                                            class="sidebar-item"
+                                        >
+                                            Introduction & Overview
+                                        </a>
+                                        <ul class="sidebar-sub-items">
+                                            <li>
+                                                <a
+                                                    href="/documentation/pages/with-js/#home"
+                                                    class="sidebar-item"
+                                                    id="#home-href"
+                                                >
+                                                    Home
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p class="sidebar-item sidebar-heading">
+                                    Getting Started
+                                </p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="/documentation/pages/with-js/getting-started/#download-and-configure"
+                                            class="sidebar-item"
+                                        >
+                                            Downloading endpoint.php</a
+                                        >
+                                        <ul class="sidebar-sub-items">
+                                            <li>
+                                                <a
+                                                    href="/documentation/pages/with-js/getting-started/#download-and-configure"
+                                                    class="sidebar-item"
+                                                    >Configuration</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/documentation/pages/setup/setup/#initializing"
+                                            class="sidebar-item"
+                                            >Including JavaScript Library</a
+                                        >
+                                    </li>
+                                </ul>
+                                <p class="sidebar-item sidebar-heading">
+                                    Initialization & Setup
+                                </p>
+                                <ul>
+                                    <li>
+                                        <a href="/documentation/pages/with-js/getting-started/include-js-lib.html" class="sidebar-item"
+                                            >Initialize Library</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="sidebar-item">something</a>
+                                    </li>
+                                </ul>
+                                <p class="sidebar-item sidebar-heading">
+                                    Implementation - With JavaScript
+                                </p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="/documentation/pages/with-js/implementation/#making-requests"
+                                            class="sidebar-item"
+                                            >Making Requests</a
+                                        >
+                                        <ul class="sidebar-sub-items">
+                                            <li>
+                                                <a
+                                                    href="/documentation/pages/with-js/implementation/#ewd-request"
+                                                    class="sidebar-item"
+                                                    >EWD Requests</a
+                                                >
+                                            </li>
+                                        </ul>
+                                        <a
+                                            href="/documentation/pages/with-js/implementation/reading-cells.html"
+                                            class="sidebar-item"
+                                            >Reading Cells</a
+                                        >
+                                        <ul class="sidebar-sub-items">
+                                            <li>
+                                                <a
+                                                    href="/documentation/pages/with-js/implementation/reading-cells.html#reading-singular-cell"
+                                                    class="sidebar-item"
+                                                    >Reading Single Cells</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/documentation/pages/with-js/implementation/reading-cells.html#reading-multiple-cells"
+                                                    class="sidebar-item"
+                                                    >Reading Multiple Cells</a
+                                                >
+                                            </li>
+                                        </ul>
+                                        <a
+                                            href="/documentation/pages/with-js/implementation/writing-cells.html"
+                                            class="sidebar-item active"
+                                            >Writing to Cells</a
+                                        >
+                                        <ul class="sidebar-sub-items">
+                                            <li>
+                                                <a
+                                                    href="/documentation/pages/with-js/implementation/writing-cells.html#writing-singular-cell"
+                                                    class="sidebar-item active"
+                                                    >Writing Single Cells</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/documentation/pages/with-js/implementation/writing-cells.html#writing-multiple-cells"
+                                                    class="sidebar-item active"
+                                                    >Writing Multiple Cells</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p class="sidebar-item sidebar-heading">end of docs</p>
+                                <ul>
+                                    <li>
+                                        <a class="sidebar-item" href="/documentation/pages/with-js/end/end.html">You have reached the end!</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </aside>
+                    </div>
+                    <main class="page">
+                        <div class="docs">
+                                <h1 class="header" id="writing-cells">
+                                    <a href="#writing-cells" class="header-anchor">
+                                        #
+                                    </a>
+                                    Writing In Cells
+                                </h1>
+                                <div class="docs-content">
+                                    <h2 class="header" id="writing-singular-cell">
+                                        <a class="header-anchor" href="#writing-singular-cell">
+                                            #
+                                        </a>
+                                        Writing Singular Cells
+                                    </h2>
+                                    <p>
+                                        Writing to cells uses the 5th parameter, the data
+                                        parameter. To write to a single cell, use the below
+                                        format with your own data:
+                                    </p>
+                                    <iframe
+                                            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=javascript&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=let%2520success%2520%253D%2520ewdRequest%28%2522w%2522%252C%2520%2522example.xlsx%2522%252C%2520%2522false%2522%252C%2520%2522C4%2522%252C%2520%252258%2522%29%253B"
+                                            style="
+                                width: 664px;
+                                height: 206px;
+                                border: 0;
+                                transform: scale(1);
+                                overflow: hidden;
+                            "
+                                            sandbox="allow-scripts allow-same-origin"
+                                    >
+                                    </iframe>
+                                    <p>
+                                        It will return JSON indicating success
+                                    </p>
+                                    <iframe
+                                            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%2522success%2522%253Atrue%252C%2522data%2522%253A%2522Success%2522%255D"
+                                            style="
+                                width: 664px;
+                                height: 188px;
+                                border: 0;
+                                transform: scale(1);
+                                overflow: hidden;
+                            "
+                                            sandbox="allow-scripts allow-same-origin"
+                                    >
+                                    </iframe>
+                                    <h2 class="header" id="writing-multiple-cells">
+                                        <a class="header-anchor" href="#writing-multiple-cells">
+                                            #
+                                        </a>
+                                        Writing Multiple Cells
+                                    </h2>
+                                    <p>
+                                        To write to multiple cells, it is trickier. You will
+                                        provide the top left cell of the cells you are
+                                        writing to. Then you will provide a JSON array of
+                                        data based on the cell you provided. Example:
+                                    </p>
+                                    <iframe
+                                            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=javascript&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=let%2520success%2520%253D%2520ewdRequest%28%2522w%2522%252C%2520%2522example.xlsx%2522%252C%2520%2522false%2522%252C%2520%2522A1%2522%252C%2520%2522%255B%255B1%252C2%255D%252C%255B3%252C4%255D%255D%2522%29%253B"
+                                            style="
+                                width: 664px;
+                                height: 206px;
+                                border: 0;
+                                transform: scale(1);
+                                overflow: hidden;
+                            "
+                                            sandbox="allow-scripts allow-same-origin"
+                                    >
+                                    </iframe>
+                                    <p>
+                                        That would write to the cells A1, A2, B1, and B2.
+                                        JSON indicating success will be returned.
+                                    </p>
+                                    <iframe
+                                            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%2522success%2522%253Atrue%252C%2522data%2522%253A%2522Success%2522%255D"
+                                            style="
+                                width: 664px;
+                                height: 188px;
+                                border: 0;
+                                transform: scale(1);
+                                overflow: hidden;
+                            "
+                                            sandbox="allow-scripts allow-same-origin"
+                                    >
+                                    </iframe>
+                                </div>
+                        </div>
+                        <footer>FOOTER STUFF HERE</footer>
+                        <nav class="page-nav">
+                            <p>
+                                <span>
+                                    <a
+                                        href="/documentation/pages/with-js/end/end.html"
+                                        class="nav-link"
+                                        >END</a
+                                    >
+                                    →
+                                </span>
+                            </p>
+                        </nav>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <script src="/js/docs.js"></script>
+    </body>
+</html>

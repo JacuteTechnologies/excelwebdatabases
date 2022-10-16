@@ -1,8 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <script>
-            window.location.href = 'pages/home/overview.html'
-        </script>
+        <title>Docs - ExcelWebDatabases</title>
+        <link rel="icon" href="/source/favicon.ico" />
+        <link rel="stylesheet" href="/source/jacute.css" />
     </head>
+    <body>
+        <div id="app">
+            <div>
+                <div class="content-wrapper">
+                    <header class="navbar">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-links-wrapper">
+                                <div class="navbar-links-container">
+                                    <nav>
+                                        <div class="navbar-links-item">
+                                            <span>
+                                                <a href="/" class="router-link">
+                                                    Home
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="navbar-links-item">
+                                            <span>
+                                                <a
+                                                    href="/documentation/"
+                                                    class="router-link-active"
+                                                >
+                                                    Documentation
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="navbar-links-item">
+                                            <a
+                                                href="/documentation/pages/with-php/"
+                                                >With-PHP</a
+                                            >
+                                        </div>
+                                        <div class="navbar-links-item">
+                                            <a>Github?</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <!--                                <div class="navbar-links-container">-->
+                                <!--                                    <button class="toggle-dark-button">-->
+                                <!--                                        <svg class="icon light-icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg>-->
+                                <!--                                        <svg class="icon dark-icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg>-->
+                                <!--                                    </button>-->
+                                <!--                                </div>-->
+                            </div>
+                        </div>
+                    </header>
+                    <div class="sidebar-wrapper" style="float: left">
+                        <aside class="sidebar">
+                            <ul class="sidebar-links">
+                                <li>
+                                    <a class="sidebar-item" href="/documentation/pages/with-js/">With-JS</a>
+                                </li>
+                                <li>
+                                    <a class="sidebar-item" href="/documentation/pages/with-php/">With-PHP</a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <main class="page">
+                        <div class="docs">
+                            <h1>
+                                <img src="/source/excel.png" />ExcelWebDatabases
+                                Documentation
+                            </h1>
+                            <h2>WHAT IS POSSIBLE?</h2>
+                            <p>
+                                With ExcelWebDatabases, you can upload an Excel
+                                spreadsheet and access it through a web API,
+                                making it like a web databases. It is
+                                theoretically usable via any language that is
+                                capable of making a web request, and a JS
+                                library is available.
+                            </p>
+                            <p>
+                                This documentation will demonstrate the
+                                read/write capabilities of the ExcelWebDatabases
+                                API, such as...
+                            </p>
+                            <ul>
+                                <li>Reading one cell at a time</li>
+                                <li>Reading multiple cells at a time</li>
+                                <li>Writing one cell at a time</li>
+                                <li>Writing more than one cell at a time</li>
+                            </ul>
+                        </div>
+                        <footer>FOOTER STUFF HERE</footer>
+                        <nav class="page-nav">
+                            <p>
+                                <span>
+                                    <a
+                                        href="/documentation/pages/with-js/"
+                                        class="nav-link"
+                                        >With-JS</a
+                                    >
+                                    →
+                                </span>
+                            </p>
+                            <p style="border-top: none; padding-top: 0.1rem;">
+                                <span>
+                                    <a
+                                            href="/documentation/pages/with-php/"
+                                            class="nav-link"
+                                    >With-PHP</a
+                                    >
+                                    →
+                                </span>
+                            </p>
+                        </nav>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <script src="/js/docs.js"></script>
+    </body>
 </html>

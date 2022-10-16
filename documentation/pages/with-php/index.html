@@ -15,12 +15,17 @@
                                 <div class="navbar-links-container">
                                     <nav>
                                         <div class="navbar-links-item">
-                                            <a href="/documentation"
-                                                >EXCELWebDB Documentation</a
+                                            <a href="/">
+                                                Home
+                                            </a>
+                                        </div>
+                                        <div class="navbar-links-item">
+                                            <a class="router-link-active" href="/documentation"
+                                                >Documentation</a
                                             >
                                         </div>
                                         <div class="navbar-links-item">
-                                            <a>With-JS</a>
+                                            <a href="/documentation/pages/with-js/">With-JS</a>
                                         </div>
                                         <div class="navbar-links-item">
                                             <a>Github?</a>
@@ -78,9 +83,7 @@
                                         >
                                     </li>
                                     <li>
-                                        <a class="sidebar-item"
-                                            >SD:KJ:FLKJ:LDFKDL:FJDLKFJ:L</a
-                                        >
+                                        <a class="sidebar-item">something</a>
                                     </li>
                                 </ul>
                                 <p class="sidebar-item sidebar-heading">
@@ -358,7 +361,9 @@
                                                     margin-left: 25px;
                                                 "
                                             >
-                                                When making a read request, you have the option to read a single cell or to read multiple cells. 
+                                                When making a read request, you
+                                                have the option to read a single
+                                                cell or to read multiple cells.
                                             </p>
                                             <p
                                                 style="
@@ -367,18 +372,40 @@
                                                     margin-left: 25px;
                                                 "
                                             >
-                                                If you are reading a single cell, you will receive a JSON response with data set to the cell's value. In the API endpoint, set cell to the cell you would like to read, document to the doc name, key to you rkey, mode to r, and isMulti to false. PHP example:
+                                                If you are reading a single
+                                                cell, you will receive a JSON
+                                                response with data set to the
+                                                cell's value. In the API
+                                                endpoint, set cell to the cell
+                                                you would like to read, document
+                                                to the doc name, key to you
+                                                rkey, mode to r, and isMulti to
+                                                false. PHP example:
                                             </p>
                                             <iframe
-  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524requestURL%2520%253D%2520%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dr%2526document%253Dsample.xlsx%2526isMulti%253Dfalse%2526cell%253DA1%2522%253B%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2524requestURL%29%253B%250A%2520%2520%2524decoded%2520%253D%2520json_decode%28%2524response%252C%2520true%29%253B%250A%2520%2520%2524data%2520%253D%2520%2524decoded%255B%27data%27%255D%253B%250A%253F%253E"
-  style="width: 664px; height: 318px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
-<iframe
-  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%2522success%2522%253A%2520true%252C%2520%2522data%2522%253A%25203%257D"
-  style="width: 664px; height: 188px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
+                                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524requestURL%2520%253D%2520%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dr%2526document%253Dsample.xlsx%2526isMulti%253Dfalse%2526cell%253DA1%2522%253B%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2524requestURL%29%253B%250A%2520%2520%2524decoded%2520%253D%2520json_decode%28%2524response%252C%2520true%29%253B%250A%2520%2520%2524data%2520%253D%2520%2524decoded%255B%27data%27%255D%253B%250A%253F%253E"
+                                                style="
+                                                    width: 664px;
+                                                    height: 318px;
+                                                    border: 0;
+                                                    transform: scale(1);
+                                                    overflow: hidden;
+                                                "
+                                                sandbox="allow-scripts allow-same-origin"
+                                            >
+                                            </iframe>
+                                            <iframe
+                                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%2522success%2522%253A%2520true%252C%2520%2522data%2522%253A%25203%257D"
+                                                style="
+                                                    width: 664px;
+                                                    height: 188px;
+                                                    border: 0;
+                                                    transform: scale(1);
+                                                    overflow: hidden;
+                                                "
+                                                sandbox="allow-scripts allow-same-origin"
+                                            >
+                                            </iframe>
                                         </div>
                                         <div class="reading-multiple-cells">
                                             <p
@@ -388,19 +415,43 @@
                                                     margin-left: 25px;
                                                 "
                                             >
-                                                If you are reading multiple cells, the following PHP will work, and you will receive a JSON response with data set to JSON of the data you requested. In the endpoint, set key to you key, mode to r, document to the doc name, isMulti to true, and cell to an excel range that you would like to read. Eg. A1:B2. PHP example:
+                                                If you are reading multiple
+                                                cells, the following PHP will
+                                                work, and you will receive a
+                                                JSON response with data set to
+                                                JSON of the data you requested.
+                                                In the endpoint, set key to you
+                                                key, mode to r, document to the
+                                                doc name, isMulti to true, and
+                                                cell to an excel range that you
+                                                would like to read. Eg. A1:B2.
+                                                PHP example:
                                             </p>
                                             <iframe
-  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524requestURL%2520%253D%2520%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dr%2526document%253Dsample.xlsx%2526isMulti%253Dtrue%2526cell%253DA1%253AB2%2522%253B%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2524requestURL%29%253B%250A%2520%2520%2524decoded%2520%253D%2520json_decode%28%2524response%252C%2520true%29%253B%250A%2520%2520%2524data%2520%253D%2520%2524decoded%255B%27data%27%255D%253B%250A%2520%2520%2524a1%2520%253D%2520%2524data%255B%271%27%255D%255B%27A%27%255D%253B%250A%2520%2520echo%2520%2524a1%253B%250A%253F%253E"
-  style="width: 664px; height: 355px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
-<br><br>
-<iframe
-src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%2522success%2522%253A%2520true%252C%2520%2522data%2522%253A%2520%257B%25221%2522%253A%257B%2522A%2522%253A3%252C%2522B%2522%253A4%257D%252C%25222%2522%253A%257B%2522A%2522%253A5%252C%2522B%2522%253A6%257D%257D%257D"
-style="width: 664px; height: 206px; border:0; transform: scale(1); overflow:hidden;"
-sandbox="allow-scripts allow-same-origin">
-</iframe>
+                                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524requestURL%2520%253D%2520%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dr%2526document%253Dsample.xlsx%2526isMulti%253Dtrue%2526cell%253DA1%253AB2%2522%253B%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2524requestURL%29%253B%250A%2520%2520%2524decoded%2520%253D%2520json_decode%28%2524response%252C%2520true%29%253B%250A%2520%2520%2524data%2520%253D%2520%2524decoded%255B%27data%27%255D%253B%250A%2520%2520%2524a1%2520%253D%2520%2524data%255B%271%27%255D%255B%27A%27%255D%253B%250A%2520%2520echo%2520%2524a1%253B%250A%253F%253E"
+                                                style="
+                                                    width: 664px;
+                                                    height: 355px;
+                                                    border: 0;
+                                                    transform: scale(1);
+                                                    overflow: hidden;
+                                                "
+                                                sandbox="allow-scripts allow-same-origin"
+                                            >
+                                            </iframe>
+                                            <br /><br />
+                                            <iframe
+                                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%2522success%2522%253A%2520true%252C%2520%2522data%2522%253A%2520%257B%25221%2522%253A%257B%2522A%2522%253A3%252C%2522B%2522%253A4%257D%252C%25222%2522%253A%257B%2522A%2522%253A5%252C%2522B%2522%253A6%257D%257D%257D"
+                                                style="
+                                                    width: 664px;
+                                                    height: 206px;
+                                                    border: 0;
+                                                    transform: scale(1);
+                                                    overflow: hidden;
+                                                "
+                                                sandbox="allow-scripts allow-same-origin"
+                                            >
+                                            </iframe>
                                         </div>
                                     </div>
                                     <div id="writing-cells">
@@ -426,7 +477,9 @@ sandbox="allow-scripts allow-same-origin">
                                                     margin-left: 25px;
                                                 "
                                             >
-                                                When writing to cells, you have the option to write to a single cell or to a range of cells.
+                                                When writing to cells, you have
+                                                the option to write to a single
+                                                cell or to a range of cells.
                                             </p>
                                             <p
                                                 style="
@@ -435,14 +488,29 @@ sandbox="allow-scripts allow-same-origin">
                                                     margin-left: 25px;
                                                 "
                                             >
-                                                To write to a single cell, in the endpoint URL, set key to your key, document to the doc name, isMulti to false, cell to the cell you want to write to, and data to the value you want to put in the cell. You will receive JSON indicating success as shown below.
+                                                To write to a single cell, in
+                                                the endpoint URL, set key to
+                                                your key, document to the doc
+                                                name, isMulti to false, cell to
+                                                the cell you want to write to,
+                                                and data to the value you want
+                                                to put in the cell. You will
+                                                receive JSON indicating success
+                                                as shown below.
                                             </p>
                                             <iframe
-  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dw%2526document%253Dsample.xlsx%2526isMulti%253Dfalse%2526cell%253DA1%2526data%253D3%2522%29%253B%250A%2520%2520%2524success%2520%253D%2520json_decode%28%2524response%252C%2520true%29%255B%27data%27%255D%253B%250A%2520%2520%252F%252F%2524success%2520will%2520be%2520%2522success%2522%2520if%2520successful%250A%253F%253E"
-  style="width: 664px; height: 318px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
-<br><br>
+                                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dw%2526document%253Dsample.xlsx%2526isMulti%253Dfalse%2526cell%253DA1%2526data%253D3%2522%29%253B%250A%2520%2520%2524success%2520%253D%2520json_decode%28%2524response%252C%2520true%29%255B%27data%27%255D%253B%250A%2520%2520%252F%252F%2524success%2520will%2520be%2520%2522success%2522%2520if%2520successful%250A%253F%253E"
+                                                style="
+                                                    width: 664px;
+                                                    height: 318px;
+                                                    border: 0;
+                                                    transform: scale(1);
+                                                    overflow: hidden;
+                                                "
+                                                sandbox="allow-scripts allow-same-origin"
+                                            >
+                                            </iframe>
+                                            <br /><br />
                                             <iframe
                                                 src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%2522success%2522%253Atrue%252C%2522data%2522%253A%2522Success%2522%255D"
                                                 style="
@@ -506,14 +574,21 @@ sandbox="allow-scripts allow-same-origin">
                                                 be set to two, B1 would be set
                                                 to three, and B2 would be set to
                                                 four. It will return JSON
-                                                indicating success. PHP example: 
+                                                indicating success. PHP example:
                                             </p>
                                             <iframe
-  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dw%2526document%253Dsample.xlsx%2526isMulti%253Dftrue%2526cell%253DA1%2526data%253D%257B%257B1%252C2%257D%252C%257B3%252C4%257D%257D%2522%29%253B%250A%2520%2520%2524success%2520%253D%2520json_decode%28%2524response%252C%2520true%29%255B%27data%27%255D%253B%250A%2520%2520%252F%252F%2524success%2520will%2520be%2520%2522success%2522%2520if%2520successful%250A%253F%253E"
-  style="width: 664px; height: 318px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
-<br><br>
+                                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dw%2526document%253Dsample.xlsx%2526isMulti%253Dftrue%2526cell%253DA1%2526data%253D%257B%257B1%252C2%257D%252C%257B3%252C4%257D%257D%2522%29%253B%250A%2520%2520%2524success%2520%253D%2520json_decode%28%2524response%252C%2520true%29%255B%27data%27%255D%253B%250A%2520%2520%252F%252F%2524success%2520will%2520be%2520%2522success%2522%2520if%2520successful%250A%253F%253E"
+                                                style="
+                                                    width: 664px;
+                                                    height: 318px;
+                                                    border: 0;
+                                                    transform: scale(1);
+                                                    overflow: hidden;
+                                                "
+                                                sandbox="allow-scripts allow-same-origin"
+                                            >
+                                            </iframe>
+                                            <br /><br />
                                             <iframe
                                                 src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%255B%2522success%2522%253Atrue%252C%2522data%2522%253A%2522Success%2522%255D"
                                                 style="
@@ -528,31 +603,6 @@ sandbox="allow-scripts allow-same-origin">
                                             </iframe>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="php-examples">
-                                    <h2
-                                        style="
-                                            text-align: left;
-                                            position: relative;
-                                            font-weight: 700;
-                                            font-size: 30px;
-                                            margin-top: 2em;
-                                            margin-bottom: 10px;
-                                            line-height: 1.33333;
-                                            margin-left: 15px;
-                                        "
-                                    >
-                                        PHP examples:
-                                    </h2>
-                                    <p
-                                        style="
-                                            font-size: 19px;
-                                            text-align: left;
-                                            margin-left: 25px;
-                                        "
-                                    >
-                                        DEV NOTE: These aren't here yet.
-                                    </p>
                                 </div>
                             </div>
                         </div>
