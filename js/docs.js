@@ -34,3 +34,4 @@
 //         'The box is not visible in the viewport';
 //     element.textContent = messageText;
 // })
+function sidebarChange() {}

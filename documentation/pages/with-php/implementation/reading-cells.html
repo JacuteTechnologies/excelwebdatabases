@@ -59,7 +59,7 @@
                                     </li>
                                     <li>
                                         <a
-                                            class="sidebar-item active"
+                                            class="sidebar-item"
                                             href="/documentation/pages/with-php/"
                                         >
                                             Introduction
@@ -67,7 +67,7 @@
                                         <ul class="sidebar-sub-items">
                                             <li>
                                                 <a
-                                                    class="sidebar-item active"
+                                                    class="sidebar-item"
                                                     href="/documentation/pages/with-php/#home"
                                                     >Home
                                                 </a>
@@ -113,7 +113,7 @@
                                     <li>
                                         <a
                                             href="/documentation/pages/with-php/implementation/reading-cells.html#reading-cells"
-                                            class="sidebar-item"
+                                            class="sidebar-item active"
                                         >
                                             Reading Cells
                                         </a>
@@ -230,124 +230,157 @@
                     </div>
                     <main class="page">
                         <div class="docs">
-                            <h1>
-                                <img src="/source/excel.png" />ExcelWebDatabases
-                                Documentation
-                            </h1>
                             <div class="docs-content">
-                                <h1 class="header" id="introduction">
+                                <h2 id="reading-cells" class="header">
                                     <a
+                                        href="#reading-cells"
                                         class="header-anchor"
-                                        href="#introduction"
                                     >
                                         #
                                     </a>
-                                    Introduction
-                                </h1>
-                                <p>
-                                    Welcome to the ExcelWebDatabase
-                                    documentation with PHP! In this guide you
-                                    will learn how to...
-                                </p>
-                                <ul>
-                                    <li>Configure connection to the API</li>
-                                    <li>
-                                        Make requests to the ExcelWebDatabase
-                                        API:
-                                        <ul>
-                                            <li>
-                                                Read Requests
-                                                <ul>
-                                                    <li>Singular Cell</li>
-                                                    <li>Multiple Cells</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Write Requests
-                                                <ul>
-                                                    <li>Singular Cell</li>
-                                                    <li>Multiple Cells</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        You will also be given examples and
-                                        in-depth walkthroughs to aid in your
-                                        understanding of this documentation...
-                                    </li>
-                                    <li>...and so much more!</li>
-                                </ul>
-                                <p>So, without further ado, let's dive in.</p>
-                                <h2 id="home" class="header">
-                                    Home
-                                    <a
-                                        class="header-anchor"
-                                        href="#home"
-                                        aria-hidden="true"
-                                    >
-                                        #
-                                    </a>
+                                    Reading Cells
                                 </h2>
-                                <p id="para">Some links?</p>
-                                <ul>
-                                    <li>
-                                        <a
-                                            href="/documentation/pages/with-js/getting-started/"
-                                        >
-                                            Getting Started with endpoint.php
-                                        </a>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="/documentation/pages/with-js/getting-started/#downloading-and-configuring"
-                                                >
-                                                    Configuring endpoint.php
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/documentation/pages/with-js/getting-started/include-js-lib.html"
-                                        >
-                                            Including the JavaScript Library
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/documentation/pages/with-js/setup"
-                                        >
-                                            Initializing the JavaScript
-                                            Library</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/documentation/pages/with-js/implementation/"
-                                        >
-                                            Making Requests
-                                        </a>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="/documentation/pages/with-js/implementation/reading-cells.html"
-                                                >
-                                                    Reading Cells
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/documentation/pages/with-js/implementation/writing-cells.html"
-                                                >
-                                                    Writing to Cells
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>Whatever else?</li>
-                                    <li>github? home? with-php?</li>
-                                </ul>
+                                <p>
+                                    When making a read request, you have the
+                                    option to read a single cell or to read
+                                    multiple cells.
+                                </p>
+                                <p>
+                                    If you are reading a single cell, you will
+                                    receive a JSON response with data set to the
+                                    cell's value. In the API request, set
+                                    <code>document</code> to the name of the
+                                    document you are accessing. Set
+                                    <code>key</code> to your API key. Set
+                                    <code>isMulti</code> to <code>false</code>.
+                                    Set <code>mode</code> to <code>r</code>. If
+                                    your rows and colums are named, you can
+                                    access the cell by providing row and column
+                                    names (set <code>row</code> to the row name
+                                    and <code>column</code> to the column name).
+                                    You always have the option to provide the
+                                    cell's name (set <code>cell</code> to the
+                                    cell's name). PHP examples:
+                                </p>
+                                <h2 class="header" id="reading-sing-cell-name">
+                                    <a
+                                        href="#reading-sing-cell-name"
+                                        class="header-anchor"
+                                    >
+                                        #
+                                    </a>
+                                    Reading using Cell Name
+                                </h2>
+                                <p>Read using cell name</p>
+                                <iframe
+                                    src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524requestURL%2520%253D%2520%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dr%2526document%253Dsample.xlsx%2526isMulti%253Dfalse%2526cell%253DA1%2522%253B%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2524requestURL%29%253B%250A%2520%2520%2524decoded%2520%253D%2520json_decode%28%2524response%252C%2520true%29%253B%250A%2520%2520%2524data%2520%253D%2520%2524decoded%255B%27data%27%255D%253B%250A%253F%253E"
+                                    style="
+                                        width: 664px;
+                                        height: 318px;
+                                        border: 0;
+                                        transform: scale(1);
+                                        overflow: hidden;
+                                    "
+                                    sandbox="allow-scripts allow-same-origin"
+                                >
+                                </iframe>
+                                <h2
+                                    class="header"
+                                    id="reading-sing-row-and-column-name"
+                                >
+                                    <a
+                                        href="#reading-sing-row-and-column-name"
+                                        class="header-anchor"
+                                    >
+                                        #
+                                    </a>
+                                    Reading using Row and Column Names
+                                </h2>
+                                <p>Read using row and column names</p>
+                                <iframe
+                                    src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524requestURL%2520%253D%2520%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dr%2526document%253Dsample.xlsx%2526isMulti%253Dfalse%2526row%253DRowName%2526column%253DColumnName%2522%253B%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2524requestURL%29%253B%250A%2520%2520%2524decoded%2520%253D%2520json_decode%28%2524response%252C%2520true%29%253B%250A%2520%2520%2524data%2520%253D%2520%2524decoded%255B%27data%27%255D%253B%250A%253F%253E"
+                                    style="
+                                        width: 664px;
+                                        height: 318px;
+                                        border: 0;
+                                        transform: scale(1);
+                                        overflow: hidden;
+                                    "
+                                    sandbox="allow-scripts allow-same-origin"
+                                >
+                                </iframe>
+                                <h2
+                                    class="header"
+                                    id="reading-sing-json-response"
+                                >
+                                    <a
+                                        href="#reading-sing-json-response"
+                                        class="header-anchor"
+                                    >
+                                        #
+                                    </a>
+                                    JSON Response
+                                </h2>
+                                <p>JSON response</p>
+                                <iframe
+                                    src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%2522success%2522%253A%2520true%252C%2520%2522data%2522%253A%25203%257D"
+                                    style="
+                                        width: 664px;
+                                        height: 188px;
+                                        border: 0;
+                                        transform: scale(1);
+                                        overflow: hidden;
+                                    "
+                                    sandbox="allow-scripts allow-same-origin"
+                                >
+                                </iframe>
+                                <h2 class="header" id="reading-multiple-cells">
+                                    <a
+                                        href="#reading-multiple-cells"
+                                        class="header-anchor"
+                                    >
+                                        #
+                                    </a>
+                                    Reading Multiple Cells
+                                </h2>
+                                <p>
+                                    If you are reading multiple cells, you must
+                                    access the cells using a cell name range
+                                    (ex. A1:B2). You cannot use rows and
+                                    columns. In the API request, set
+                                    <code>document</code> to the name of the
+                                    document you are accessing. Set
+                                    <code>key</code> to your API key. Set
+                                    <code>isMulti</code> to <code>true</code>.
+                                    Set <code>mode</code> to <code>r</code>.
+                                    Finally, set <code>cell</code> to the cell
+                                    range (ex. A1:B2) to the group of cells you
+                                    would like to read. PHP example:
+                                </p>
+                                <iframe
+                                    src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=text%2Fx-php&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%2520%2520%2524requestURL%2520%253D%2520%2522https%253A%252F%252Fs.jacute.xyz%252Fmain%252Fusers%252Fapi.php%253Fkey%253D71d385c7473b54ca5fdb59bcd414ef01%2526mode%253Dr%2526document%253Dsample.xlsx%2526isMulti%253Dtrue%2526cell%253DA1%253AB2%2522%253B%250A%2520%2520%2524response%2520%253D%2520file_get_contents%28%2524requestURL%29%253B%250A%2520%2520%2524decoded%2520%253D%2520json_decode%28%2524response%252C%2520true%29%253B%250A%2520%2520%2524data%2520%253D%2520%2524decoded%255B%27data%27%255D%253B%250A%2520%2520%2524a1%2520%253D%2520%2524data%255B%271%27%255D%255B%27A%27%255D%253B%250A%2520%2520echo%2520%2524a1%253B%250A%253F%253E"
+                                    style="
+                                        width: 664px;
+                                        height: 355px;
+                                        border: 0;
+                                        transform: scale(1);
+                                        overflow: hidden;
+                                    "
+                                    sandbox="allow-scripts allow-same-origin"
+                                >
+                                </iframe>
+                                <iframe
+                                    src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%2522success%2522%253A%2520true%252C%2520%2522data%2522%253A%2520%257B%25221%2522%253A%257B%2522A%2522%253A3%252C%2522B%2522%253A4%257D%252C%25222%2522%253A%257B%2522A%2522%253A5%252C%2522B%2522%253A6%257D%257D%257D"
+                                    style="
+                                        width: 664px;
+                                        height: 206px;
+                                        border: 0;
+                                        transform: scale(1);
+                                        overflow: hidden;
+                                    "
+                                    sandbox="allow-scripts allow-same-origin"
+                                >
+                                </iframe>
                             </div>
                         </div>
                         <nav class="page-nav">
@@ -366,5 +399,6 @@
                 </div>
             </div>
         </div>
+        <script src="/js/docs.js"></script>
     </body>
 </html>

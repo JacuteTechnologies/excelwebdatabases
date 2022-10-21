@@ -45,7 +45,8 @@ html {
     --c-bg-scrollbar: #171717;
     --c-bg-light: #2b313a;
     --c-border: rgba(255, 255, 255, 0.05);
-    --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica,
+        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     --font-family-code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
         monospace;
 }
@@ -385,6 +386,12 @@ button {
     padding: 0.35rem 1.5rem 0.35rem 1.25rem;
     width: 100%;
 }
+.sidebar-sub-heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+    width: 100%;
+}
 .sidebar ul {
     padding: 0;
     margin: 0;
@@ -401,6 +408,10 @@ button {
 .sidebar-sub-items .sidebar-item:not(.sidebar-heading) {
     padding: 0.25rem 1rem 0.25rem 3rem;
     font-size: 0.95em;
+}
+.sidebar-sub-sub-items .sidebar-item:not(.sidebar-heading) {
+    padding: 0.25rem 1rem 0.25rem 3.5rem;
+    font-size: 0.92em;
 }
 /* Content */
 .docs-content {
@@ -493,9 +504,14 @@ a.header-anchor {
     color: var(--lighter-blue);
     font-weight: 650;
 }
-.sidebar .sidebar-links .sidebar-item:hover:not(.sidebar-heading) {
+.sidebar
+    .sidebar-links
+    .sidebar-item:hover:not(.sidebar-heading, .sidebar-sub-heading) {
     color: var(--blue-30);
     cursor: pointer;
+}
+.sidebar-sub-heading:hover {
+    cursor: default;
 }
 /* Nav */
 /* Hover AFFECTS */
