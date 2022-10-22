@@ -11,7 +11,7 @@ function ewdRequest(mode, document, multi, cell, row, column, data){
     if(typeof row !== 'undefined' && typeof column !== 'undefined'){
         rc = true;
     }
-    if(typeof cell !== 'undefined'){
+    if(typeof cell !== 'undefined' && typeof cell !== 'int'){
         c = true;
     }
     if(rc && c){
