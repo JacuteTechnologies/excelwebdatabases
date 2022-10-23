@@ -226,9 +226,9 @@
                                 </h2>
                                 <p>
                                     To read a single cell, execute the below
-                                    command, and replace the key, document name,
-                                    and cell to read with your own.
+                                    command, and replace the key and the document name with your own. To determine what cell you want to read, you can either pass the cell parameter, or if your rows and columed are named, the row and column of the cell. If you are using row and column, set cell to 0. You do not need to set row and column to zero with you are using cell, however.
                                 </p>
+                                <p>Example using the cell parameter</p>
                                 <iframe
                                     src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=javascript&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=let%2520response%2520%253D%2520ewdRequest%28%2522r%2522%252C%2520%2522example.xlsx%2522%252C%2520%2522false%2522%252C%2520%2522A3%2522%29%253B"
                                     style="
@@ -241,6 +241,12 @@
                                     sandbox="allow-scripts allow-same-origin"
                                 >
                                 </iframe>
+                                <p>Example using row and column name of the cell</p>
+                                <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=javascript&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=let%2520response%2520%253D%2520ewdRequest%28%2522r%2522%252C%2520%2522example.xlsx%2522%252C%2520%2522false%2522%252C%25200%252C%2520%2522rowName%2522%252C%2520%2522columnName%2522%29%253B"
+  style="width: 664px; height: 206px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
                                 <p>
                                     It will return JSON. An example response is:
                                 </p>
@@ -267,8 +273,8 @@
                                 </h2>
                                 <p>
                                     To read multiple cells, you will be doing
-                                    the same thing, except providing a range
-                                    like you would in Excel (eg. A1:B2).
+                                    the same thing, except providing a range in the cell parameter
+                                    like you would in Excel (eg. A1:B2). You cannot use row and column names as those do not provide a range.
                                 </p>
                                 <iframe
                                     src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=javascript&width=664&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=let%2520response%2520%253D%2520ewdRequest%28%2522r%2522%252C%2520%2522example.xlsx%2522%252C%2520%2522true%2522%29%253B"
