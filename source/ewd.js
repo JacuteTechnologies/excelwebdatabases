@@ -8,7 +8,7 @@ function ewdRequest(mode, document, multi, cell, row, column, data){
     let xhttp = new XMLHttpRequest();
     let rc = false;
     let c = false;
-    if(typeof row !== 'undefined' && typeof column !== 'undefined'){
+    if(typeof row !== 'undefined' && typeof row !== 'int' && typeof column !== 'int' && typeof column !== 'undefined'){
         rc = true;
     }
     if(typeof cell !== 'undefined' && typeof cell !== 'int'){
