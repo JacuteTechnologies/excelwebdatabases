@@ -73,7 +73,7 @@ function checkCaptcha($recaptcha){
                 <?php
                     $c = scandir($key);
                     foreach($c as $i){
-                        if($i != ".." && $i != "." && $i != ""){
+                        if($i != ".." && $i != "." && $i != "" && strpos($i, ".xlsx") !== false){
                             $entry = "  ".$i;
                             $t = $i;
                             echo "<a href='$key/$t' style='text-decoration:none;color:black'><div style='background-color:lightgrey;border-radius:5px;border:1px solid black;margin-left:auto;margin-right:auto;display:block;width:400px;padding:3px;text-align:left'><img src='/source/excel.png' style='width:20px'>".$entry."</div></a><br>";
