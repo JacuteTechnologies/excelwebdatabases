@@ -65,17 +65,17 @@ if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && is
             if(file_exists("$key/".$_GET["document"]) && file_exists("$key/".explode(".", $_GET["document"])[0].".bkvp")){
                 $bkvp = "$key/".explode(".", $_GET["document"])[0].".bkvp";
                 $cell = readBKVP($bkvp, $_GET["column"]).readBKVP($bkvp, $_GET["row"]);
-                if($_GET["isMulti"] == true && $_GET["mode"] == "r"){
+                if($_GET["isMulti"] == "false" && $_GET["mode"] == "r"){
                     readExcelCell($_GET["document"], $cell);
                 }
-                else if($_GET["isMulti"] == false && $_GET["mode"] == "r"){
+                else if($_GET["isMulti"] == "true" && $_GET["mode"] == "r"){
                     readExcelCellMulti($_GET["document"], $cell);
                 }
-                else if($_GET["isMulti"] == true && $_GET["mode"] == "w" && isset($_GET["data"])){
-                    writeExcelCell($_GET["document"], $cell, $data);
+                else if($_GET["isMulti"] == "false" && $_GET["mode"] == "w" && isset($_GET["data"])){
+                    writeExcelCell($_GET["document"], $cell, $_GET["data"]);
                 }
-                else if($_GET["isMulti"] == false && $_GET["mode"] == "w" && isset($_GET["data"])){
-                    writeExcelCellMulti($_GET["document"], $cell, $data);
+                else if($_GET["isMulti"] == "true" && $_GET["mode"] == "w" && isset($_GET["data"])){
+                    writeExcelCellMulti($_GET["document"], $cell, $_GET["data"]);
                 }
                 else{
                     echo '{"success": false, "data": "Error 9203 isMulti and mode wrong"}'; 
@@ -83,9 +83,24 @@ if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && is
             }
         }
         else if(isset($_GET["cell"])){
-            if(file_exists("key/".$_GET["document"])){
-                $cell = $_GET["cell"];
-
+            $key = $_GET["key"];
+            $cell = $_GET["cell"];
+            if(file_exists("$key/".$_GET["document"])){
+                if($_GET["isMulti"] == "false" && $_GET["mode"] == "r"){
+                    readExcelCell($_GET["document"], $cell);
+                }
+                else if($_GET["isMulti"] == "true" && $_GET["mode"] == "r"){
+                    readExcelCellMulti($_GET["document"], $cell);
+                }
+                else if($_GET["isMulti"] == "false" && $_GET["mode"] == "w" && isset($_GET["data"])){
+                    writeExcelCell($_GET["document"], $cell, $_GET["data"]);
+                }
+                else if($_GET["isMulti"] == "true" && $_GET["mode"] == "w" && isset($_GET["data"])){
+                    writeExcelCellMulti($_GET["document"], $cell, $_GET["data"]);
+                }
+                else{
+                    echo '{"success": false, "data": "Error 9203 isMulti and mode wrong"}'; 
+                }
             }
         }
         else{
