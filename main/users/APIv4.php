@@ -1,7 +1,7 @@
 <?php
 //APIv4 Debug
 require 'vendor/autoload.php';
-require '/lib/BKVPlib.php';
+require 'lib/BKVP.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 function readExcelCell($document, $cell){
