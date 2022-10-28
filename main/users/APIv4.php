@@ -60,10 +60,11 @@ function writeExcelCellMulti($document, $cell, $data){
 }
 if(isset($_GET["key"]) && isset($_GET["mode"]) && isset($_GET["document"]) && isset($_GET["isMulti"])){
     if(is_dir($_GET["key"])){
+        $key = $_GET["key"];
         if(isset($_GET["row"]) && isset($_GET["column"])){
-            if(file_exists("key/".$_GET["document"]) && file_exists("key/".explode(".", $_GET["document"])[0].".bkvp")){
-                $bkvp = "key/".explode(".", $_GET["document"])[0].".bkvp";
-                $cell = readBKVP($bkvp, $_GET["row"]).readBKVP($bkvp, $_GET["column"]);
+            if(file_exists("$key/".$_GET["document"]) && file_exists("$key/".explode(".", $_GET["document"])[0].".bkvp")){
+                $bkvp = "$key/".explode(".", $_GET["document"])[0].".bkvp";
+                $cell = readBKVP($bkvp, $_GET["column"]).readBKVP($bkvp, $_GET["row"]);
                 if($_GET["isMulti"] == true && $_GET["mode"] == "r"){
                     readExcelCell($_GET["document"], $cell);
                 }
