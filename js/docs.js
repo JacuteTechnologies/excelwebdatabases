@@ -20,6 +20,7 @@ function onclick2() {
     testtwo.className = "nav-item active"
     testone.className = "nav-item"
 }
+
 for (let i = 0; i < navtab.length; i++ ) {
     if (navtab[i].className.includes("active")) {
         navtab[i].ariaPressed = "true"

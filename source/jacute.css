@@ -147,7 +147,7 @@ a {
     position: absolute;
     border-radius: 10px;
     background-color: var(--periwinkle-crayola);
-    margin: 25px 200px 0 300px;
+    margin: 3.2% 100% 2% 20%;
     text-align: center;
     width: 60%;
     overflow-y: auto;
@@ -196,7 +196,7 @@ a {
 }
 
 img {
-    width: 40px;
+    width: 30px;
 }
 input {
     cursor: pointer;
