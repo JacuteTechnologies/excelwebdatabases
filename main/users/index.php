@@ -65,11 +65,11 @@ function checkCaptcha($recaptcha){
             <a href="https://jacute.xyz" class="optionOff" target="_blank">Main Home</a>
             <br><br>
         </div>
-        <div class="box">
-            <p style="font-size:40px"><img src="/source/excel.png" style="width:40px">ExcelWebDatabases</p>
-            <p style="font-size:30px">API Key: <?php echo $key?></p>
-            <p style="font-size:30px">Files:</p>
-            <p style="font-size:20px">
+        <div class="box" style="top: 100px;">
+            <p><img src="/source/excel.png" style="width:40px">ExcelWebDatabases</p>
+            <p>API Key: <?php echo $key?></p>
+            <p>Files:</p>
+            <p>
                 <?php
                     $c = scandir($key);
                     foreach($c as $i){
@@ -81,12 +81,11 @@ function checkCaptcha($recaptcha){
                     }
                 ?>
             </p>
-            <br>
         </div>
-        <br>
+
         <div class="box">
             <p style="font-size:30px">Upload Files:</p>
-            <p>These will become your databases. You can redownload at any time.</p>
+            <p>These will become your databases. You can re-download at any time.</p>
             <form action="upload.php" method="post" enctype="multipart/form-data">
              <input type="file" name="fileToUpload" id="fileToUpload">
              <br><br>
@@ -96,7 +95,7 @@ function checkCaptcha($recaptcha){
             </form>
         </div>
         <br>
-        <div class="topDiv">
+        <div class="bottomDiv">
         <p>(c)2022 Jacute Technologies</p>
         <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>
         </div>

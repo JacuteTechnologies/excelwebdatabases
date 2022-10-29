@@ -154,9 +154,9 @@ a {
     transition: 0.3s all;
     white-space: initial;
 }
-.box:hover {
-    box-shadow: 5px 5px 18px black;
-}
+/*.box:hover {*/
+/*    box-shadow: 5px 5px 18px black;*/
+/*}*/
 
 #mainpage-box,
 .overlay {
