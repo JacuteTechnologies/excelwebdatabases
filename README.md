@@ -12,7 +12,7 @@ Lets do this.
 
 **JAMES**
 
-. **Fix JS library: I don't know what happened but something messed it up (maybe the formatter?) and it needs fixing. Working on it now.**
+. **Write ALL of the docs**
 
 **BOTH**
 
