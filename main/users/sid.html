@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jacute Technologies - ExcelWebDatabases</title>
+        <link rel="icon" href="/source/favicon.ico">
+        <script src="https://www.google.com/recaptcha/api.js?render=6LclS6ohAAAAAFLHXInxx2UrrOtjRIHvBfs9B1Ki"></script>
+        <link rel="stylesheet" href="/source/jacute.css">
+        <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute("6LclS6ohAAAAAFLHXInxx2UrrOtjRIHvBfs9B1Ki", {action: "homepage"}).then(function(token) {
+                   document.getElementById("token").value = token;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="topDiv">
+            <p class="bt">Jacute Technologies</p>
+            <p class="mt">ExcelWebDatabases</p>
+            <a href="/" class="optionOn">ExcelWebDatabases</a>
+            <a href="/documentation/" class="optionOff" target="_blank">Documentation</a>
+            <a href="https://jacute.xyz" class="optionOff" target="_blank">Main Home</a>
+            <br><br>
+        </div>
+        <div class="box" style="padding-bottom: 15px;">
+            <p style="font-size:30px">Upload Files:</p>
+            <p>These will become your databases. You can re-download at any time.</p>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+             <input type="file" name="fileToUpload" id="fileToUpload">
+             <br><br>
+             <input type="hidden" id="token" name="token">
+             <input type="hidden" name="key" value="<?php echo $key;?>">
+             <input type="submit" value="Upload Excel" name="submit" id="login-btn">
+            </form>
+        </div>
+        <div class="box" style="margin-top: 325px;">
+            <p><img src="/source/excel.png" style="width:40px">ExcelWebDatabases</p>
+            <p>API Key: API_KEY_WOULD_GO_HERE</p>
+            <p>Files:</p>
+            <p>
+                <a href='THISISNOTAREALHREF'>
+                    <img src='/source/excel.png'><span style="color: var(--lighter-blue)">FILE_NAME.xlsx</span>
+                </a>
+            </p>
+        </div>
+        <br>
+<!--        <div class="bottomDiv">-->
+<!--        <p>(c)2022 Jacute Technologies</p>-->
+<!--        <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>-->
+<!--        </div>-->
+    </body>
+</html>

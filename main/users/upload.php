@@ -23,8 +23,6 @@
                   echo "if you are seeing this error something has gone very wrong";
                 } else {
                   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    $chmod = "0640";
-                    chmod($target_file, octdec($chmod));
                     header("Location:https://s.jacute.xyz/main/users/");
                   } else {
                     echo "if you are seeing this error something has gone wrong";

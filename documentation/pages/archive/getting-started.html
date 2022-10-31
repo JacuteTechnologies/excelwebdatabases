@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Docs - ExcelWebDatabases</title>
+        <link rel="icon" href="/source/favicon.ico" />
+        <link rel="stylesheet" href="/source/jacute.css" />
+    </head>
+    <body style="overflow: hidden">
+        <div id="app">
+            <div class="topDiv">
+                <p class="bt">Jacute Technologies</p>
+                <p class="mt">ExcelWebDatabases</p>
+                <a href="/" class="optionOn">ExcelWebDatabases</a>
+                <a href="/start/login.html" class="optionOff">Login</a>
+                <a href="https://jacute.xyz/" class="optionOff" target="_blank"
+                    >Main Home</a
+                >
+            </div>
+            <div class="page">
+                <div class="sidebar-wrapper" style="float: left">
+                    <div class="docs-sidebar">
+                        <div class="docs-overview">
+                            <button
+                                style="
+                                    margin-left: 10px;
+                                    background-color: transparent;
+                                    border: none;
+                                    font-size: 20px;
+                                    color: var(--celadon);
+                                    cursor: pointer;
+                                    font-weight: 200;
+                                "
+                                class="collapsible"
+                                id="docs-home-btn"
+                            >
+                                Home
+                            </button>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <a href="overview.html">Overview</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="getting-started.html"
+                                            style="
+                                                cursor: pointer;
+                                                color: var(--celadon);
+                                            "
+                                            >Getting Started</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="home.html">Home</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="docs-setup">
+                            <button
+                                style="
+                                    margin-left: 10px;
+                                    background-color: transparent;
+                                    border: none;
+                                    font-size: 20px;
+                                    color: var(--celadon);
+                                    cursor: pointer;
+                                    font-weight: 200;
+                                "
+                                class="collapsible"
+                                id="docs-setup-btn"
+                            >
+                                Setup
+                            </button>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <a href="pages/setup/with-js.html"
+                                            >With Javascript</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="pages/setup/with-php.html"
+                                            >With PHP</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="box"
+                    id="docs-box"
+                    style="
+                        display: block;
+                        color: var(--white);
+                        text-align: left;
+                    "
+                >
+                    <h1 style="font-size: 40px">
+                        <img src="/source/excel.png" />ExcelWebDatabases
+                        Documentation
+                    </h1>
+                    <h2
+                        style="
+                            text-align: left;
+                            position: relative;
+                            font-weight: 700;
+                            font-size: 30px;
+                            margin-top: 2em;
+                            margin-bottom: 10px;
+                            line-height: 1.33333;
+                            margin-left: 15px;
+                        "
+                    >
+                        How to use ExcelWebDatabases
+                    </h2>
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        Before setting up the programming, you first need to
+                        login to your ExcelWebDatabases account and upload the
+                        file you want to be your database. Keep the file name
+                        and the document name on hand.
+                    </p>
+                    <p
+                        style="
+                            font-size: 19px;
+                            text-align: left;
+                            margin-left: 25px;
+                        "
+                    >
+                        Next, you need to connect your program to the API. The
+                        API uses GET requests, and will return JSON. A JS
+                        library is available, and PHP examples are also
+                        available. However, all that is necessary is a GET
+                        request. See "PHP examples" for the endpoint URL w/
+                        parameters.
+                    </p>
+                    <h2>Quick-Access Documentation:</h2>
+                    <ul
+                        style="
+                            float: left;
+                            font-size: 19px;
+                            color: var(--lighter-blue);
+                        "
+                    >
+                        <li>
+                            <a href="setup/with-js.html"
+                                >Javascript library docs</a
+                            >
+                        </li>
+                        <li><a href="setup/with-php.html">PHP examples</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                const coll = document.getElementsByClassName('collapsible')
+                for (let i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener('click', function () {
+                        this.classList.toggle('active')
+                        const content = this.nextElementSibling
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null
+                        } else {
+                            content.style.maxHeight =
+                                content.scrollHeight + 'px'
+                        }
+                    })
+                }
+            </script>
+        </div>
+    </body>
+</html>
