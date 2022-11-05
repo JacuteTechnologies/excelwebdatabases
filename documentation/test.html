@@ -4,40 +4,21 @@
         <title>Docs - ExcelWebDatabases</title>
         <link rel="icon" href="/source/favicon.ico" />
         <link rel="stylesheet" href="/source/test.css" />
+        <script src="/js/assets.js" defer></script>
     </head>
     <body>
-        <div class="code-wrapper">
-            <div class="navbar">
-                <ul>
-                    <li>
-                        <button class="nav-item active" id="test1" onclick="onclick1()">
-                            with js
-                        </button>
-                    </li>
-                    <li>
-                        <button class="nav-item" id="test2" onclick="onclick2()">
-                            with php
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <div class="code-group-item active" id="content1">
-                <div class="language-bash ext-sh">
-                    <code>
-                        <span>npm install</span>
-                        discord.js
-                    </code>
-                </div>
-            </div>
-            <div class="code-group-item" id="content2">
-                <div class="language-bash ext-sh">
-                    <code>
-                        <span>PHP</span> something something
-                        console.log('hello world')
-                    </code>
-                </div>
-            </div>
+        <code-template></code-template>
+        <div class="dropdown-wrapper">
+            <form class="dropdown-form">
+                <input list="greetings" placeholder="greetings" class="dropdown-menu" type="search">
+                <datalist id="greetings">
+                    <option value="hi"></option>
+                    <option value="bonjour"></option>
+                    <option value="hola"></option>
+                    <option value="hello"></option>
+                    <option value="namaste"></option>
+                </datalist>
+            </form>
         </div>
-        <script src="/js/docs.js"></script>
     </body>
 </html>
