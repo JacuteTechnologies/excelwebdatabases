@@ -65,12 +65,23 @@ function checkCaptcha($recaptcha){
             <a href="https://jacute.xyz" class="optionOff" target="_blank">Main Home</a>
             <br><br>
         </div>
-        <div class="box" style="top: 100px;">
-            <p><img src="/source/excel.png" style="width:40px">ExcelWebDatabases</p>
-            <p>API Key: <?php echo $key?></p>
-            <p>Files:</p>
+        <div class="box" style="padding-bottom: 15px;">
+            <p style="font-size:30px">Upload Files:</p>
+            <p>These will become your databases. You can re-download at any time.</p>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+             <input type="file" name="fileToUpload" id="fileToUpload">
+             <br><br>
+             <input type="hidden" id="token" name="token">
+             <input type="hidden" name="key" value="<?php echo $key;?>">
+             <input type="submit" value="Upload Excel" name="submit" id="login-btn">
+            </form>
+        </div>
+        <div class="box" style="margin-top: 325px;">
+            <p style="font-size:40px"><img src="/source/excel.png" style="width:40px">ExcelWebDatabases</p>
+            <p style="font-size:30px">API Key: <?php echo $key?></p>
+            <p style="font-size:20px">Files:</p>
             <p>
-                <?php
+            <?php
                     $c = scandir($key);
                     foreach($c as $i){
                         if($i != ".." && $i != "." && $i != "" && strpos($i, ".xlsx") !== false){
@@ -82,22 +93,10 @@ function checkCaptcha($recaptcha){
                 ?>
             </p>
         </div>
-
-        <div class="box">
-            <p style="font-size:30px">Upload Files:</p>
-            <p>These will become your databases. You can re-download at any time.</p>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-             <input type="file" name="fileToUpload" id="fileToUpload">
-             <br><br>
-             <input type="hidden" id="token" name="token">
-             <input type="hidden" name="key" value="<?php echo $key;?>">
-             <input type="submit" value="Upload Excel" name="submit" id="login-btn">
-            </form>
-        </div>
         <br>
-        <div class="bottomDiv">
-        <p>(c)2022 Jacute Technologies</p>
-        <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>
-        </div>
+<!--        <div class="bottomDiv">-->
+<!--        <p>(c)2022 Jacute Technologies</p>-->
+<!--        <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>-->
+<!--        </div>-->
     </body>
 </html>
