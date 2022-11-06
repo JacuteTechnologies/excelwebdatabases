@@ -75,7 +75,7 @@ function checkCaptcha($recaptcha){
             <a href="/start/login.html" class="btn" style="font-size:30px">Proceed to Login</a>
             <br><br>
         </div>
-        <br>
+        <br><br>
         <div class="bottomDiv">
         <p>(c)2022 Jacute Technologies</p>
         <a href="mailto:jacute@iota.ws" style="color:white">Contact</a>
