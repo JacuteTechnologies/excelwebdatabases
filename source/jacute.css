@@ -265,7 +265,7 @@ input {
     font-weight: normal;
     margin-left: 0px;
 }
-.active:after {
+.active-heading:after {
     content: '\2212';
 }
 button {
