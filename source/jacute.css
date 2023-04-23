@@ -446,6 +446,9 @@ button {
     z-index: 10;
     padding-bottom: 2rem;
 }
+.content-wrapper {
+    margin-left: 0 !important;
+}
 .content-wrapper .page {
     padding-left: 0;
     color: var(--c-text);

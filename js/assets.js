@@ -1,9 +1,9 @@
-const navtab = document.getElementsByClassName("nav-item")
-const content = document.getElementsByClassName("code-group-item")
+const navtab = document.getElementsByClassName('nav-item')
+const content = document.getElementsByClassName('code-group-item')
 
 class CodeTemplate extends HTMLElement {
     constructor() {
-        super();
+        super()
     }
     connectedCallback() {
         this.innerHTML = `
@@ -42,26 +42,27 @@ class CodeTemplate extends HTMLElement {
         </div>`
         for (let i = 0; i < navtab.length; i++) {
             for (let k = 0; k < content.length; k++) {
-                if (!navtab[i].className.includes("active")) {
-                    navtab[i].onclick = function() {
+                if (!navtab[i].className.includes('active')) {
+                    navtab[i].onclick = function () {
                         for (let a = 0; a < navtab.length; a++) {
-                            navtab[a].className = "nav-item";
-                            navtab[i].className = "nav-item active"
+                            navtab[a].className = 'nav-item'
+                            navtab[i].className = 'nav-item active'
                             for (let c = 0; c < content.length; c++) {
-                                content[c].className = "code-group-item";
-                                content[k].className = "code-group-item active"
+                                content[c].className = 'code-group-item'
+                                content[k].className = 'code-group-item active'
                             }
                         }
                     }
                 } else {
-                    if (content[k].className.includes("active")) {
-                        navtab[i].onclick = function() {
+                    if (content[k].className.includes('active')) {
+                        navtab[i].onclick = function () {
                             for (let b = 0; b < navtab.length; b++) {
-                                navtab[b].className = "nav-item"
-                                navtab[i].className = "nav-item active"
+                                navtab[b].className = 'nav-item'
+                                navtab[i].className = 'nav-item active'
                                 for (let d = 0; d < content.length; d++) {
-                                    content[d].className = "code-group-item";
-                                    content[k].className = "code-group-item active"
+                                    content[d].className = 'code-group-item'
+                                    content[k].className =
+                                        'code-group-item active'
                                 }
                             }
                         }
@@ -70,7 +71,6 @@ class CodeTemplate extends HTMLElement {
             }
         }
     }
-
 }
 // class DropdownElement extends HTMLElement {
 //     constructor() {
@@ -95,4 +95,3 @@ class CodeTemplate extends HTMLElement {
 // }
 customElements.define('code-template', CodeTemplate)
 // customElements.define('dropdown-element', DropdownElement)
-
