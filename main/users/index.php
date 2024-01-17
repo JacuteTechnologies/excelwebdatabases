@@ -25,7 +25,7 @@ if(!isset($_SESSION["key"])){
 function checkCaptcha($recaptcha){
     $url = 'https://www.google.com/recaptcha/api/siteverify';
     $data = array(
-        'secret' => '6LclS6ohAAAAAGg8lT1oCi2iGBTn6S3vaDBtNmhR',
+        'secret' => '',
         'response' => $recaptcha
     );
     $options = array(
